@@ -1,0 +1,300 @@
+@font-face {
+	font-family: 'carex-icon';
+	src:url('../../fonts/carex-icon.eot');
+	src:url('../../fonts/carex-icon.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/carex-icon.ttf') format('truetype'),
+		url('../../fonts/carex-icon.woff') format('woff'),
+		url('../../fonts/carex-icon.svg#carex-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="carex-"]::before, [class*=" carex-"]::before {
+	font-family: 'carex-icon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	direction: ltr;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.carex-car-battery:before {
+	content: "\61";
+}
+.carex-car-key:before {
+	content: "\62";
+}
+.carex-car:before {
+	content: "\6b";
+}
+.carex-car-check:before {
+	content: "\6c";
+}
+.carex-car-checklist:before {
+	content: "\6d";
+}
+.carex-car-fix:before {
+	content: "\6e";
+}
+.carex-car-oil:before {
+	content: "\70";
+}
+.carex-car-lock:before {
+	content: "\71";
+}
+.carex-car-music:before {
+	content: "\72";
+}
+.carex-car-setting:before {
+	content: "\73";
+}
+.carex-car-audio:before {
+	content: "\4b";
+}
+.carex-car-fire:before {
+    content: "\e900";
+}
+.carex-car-wash:before {
+    content: "\e901";
+}
+.carex-car-wheel:before {
+    content: "\e902";
+}
+.carex-wedding-car:before {
+    content: "\e904";
+}
+.carex-car-2:before {
+	content: "\54";
+}
+.carex-car-3:before {
+	content: "\55";
+}
+.carex-eco-car:before {
+	content: "\78";
+}
+.carex-oil-can:before {
+	content: "\43";
+}
+.carex-oil-gauge:before {
+	content: "\44";
+}
+.carex-oil-station:before {
+	content: "\45";
+}
+.carex-electric-wrench:before {
+	content: "\63";
+}
+.carex-check-shield:before {
+	content: "\64";
+}
+.carex-truck:before {
+	content: "\65";
+}
+.carex-truck-tow:before {
+	content: "\66";
+}
+.carex-clock:before {
+	content: "\67";
+}
+.carex-phone-call:before {
+	content: "\68";
+}
+.carex-phone-circle:before {
+	content: "\69";
+}
+.carex-location-map:before {
+	content: "\6a";
+}
+.carex-service-24h:before {
+	content: "\6f";
+}
+.carex-check:before {
+	content: "\74";
+}
+.carex-eco-fuel:before {
+	content: "\75";
+}
+.carex-eco-fuel-barrel:before {
+	content: "\76";
+}
+.carex-eco-globe:before {
+	content: "\77";
+}
+.carex-eco-nature:before {
+	content: "\79";
+}
+.carex-inflator-pump:before {
+	content: "\7a";
+}
+.carex-lightbulb:before {
+	content: "\41";
+}
+.carex-gps:before {
+	content: "\42";
+}
+.carex-piggy-bank:before {
+	content: "\46";
+}
+.carex-road:before {
+	content: "\47";
+}
+.carex-seatbelt-lock:before {
+	content: "\48";
+}
+.carex-share-time:before {
+	content: "\49";
+}
+.carex-steering-wheel:before {
+	content: "\4a";
+}
+.carex-engine-belt:before {
+	content: "\4c";
+}
+.carex-camper:before {
+	content: "\4d";
+}
+.carex-wallet:before {
+	content: "\4e";
+}
+.carex-parking-sensor:before {
+	content: "\4f";
+}
+.carex-wrench:before {
+	content: "\50";
+}
+.carex-wrench-double:before {
+	content: "\51";
+}
+.carex-windshield:before {
+	content: "\52";
+}
+.carex-alarm:before {
+	content: "\53";
+}
+.carex-cog-double:before {
+	content: "\56";
+}
+.carex-email:before {
+	content: "\57";
+}
+.carex-gearbox:before {
+	content: "\58";
+}
+.carex-gauge:before {
+	content: "\59";
+}
+.carex-garage:before {
+	content: "\5a";
+}
+.carex-tunning:before {
+	content: "\30";
+}
+.carex-phone-call-24h:before {
+	content: "\31";
+}
+.carex-phone:before {
+	content: "\32";
+}
+.carex-video:before {
+	content: "\33";
+}
+.carex-image:before {
+	content: "\34";
+}
+.carex-images:before {
+	content: "\35";
+}
+.carex-quote:before {
+	content: "\36";
+}
+.carex-screwdriver:before {
+	content: "\37";
+}
+.carex-signal-warning:before {
+	content: "\38";
+}
+.carex-snow-crystal:before {
+	content: "\39";
+}
+.carex-speed-gauge:before {
+	content: "\21";
+}
+.carex-air-conditioning:before {
+	content: "\40";
+}
+.carex-heating:before {
+	content: "\23";
+}
+.carex-toolbox:before {
+	content: "\24";
+}
+.carex-engine-belt-2:before {
+	content: "\25";
+}
+.carex-toolbox-2:before {
+	content: "\5e";
+}
+.carex-wrench-screwdriver:before {
+	content: "\26";
+}
+.carex-caution-fence:before {
+	content: "\2a";
+}
+.carex-certificate:before {
+	content: "\28";
+}
+.carex-fax:before {
+	content: "\29";
+}
+.carex-headlight:before {
+	content: "\2d";
+}
+.carex-youtube:before {
+	content: "\3b";
+}
+.carex-pen:before {
+	content: "\27";
+}
+.carex-faq:before {
+	content: "\5c";
+}
+.carex-testimonials:before {
+	content: "\2c";
+}
+.carex-team:before {
+	content: "\2e";
+}
+.carex-person:before {
+	content: "\2f";
+}
+.carex-percent:before {
+	content: "\60";
+}
+.carex-shopping-cart:before {
+	content: "\7e";
+}
+.carex-check-2:before {
+	content: "\7b";
+}
+.carex-payment:before {
+	content: "\7d";
+}
+.carex-coffee:before {
+	content: "\22";
+}
+.carex-checklist:before {
+	content: "\7c";
+}
+.carex-fax-2:before {
+	content: "\3c";
+}
+.carex-user-chat:before {
+	content: "\3e";
+}
+.carex-sign-zigzag:before {
+    content: "\e903";
+}
