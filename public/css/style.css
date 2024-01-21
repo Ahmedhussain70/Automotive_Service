@@ -529,6 +529,9 @@ hr {
     }
 }
 
+.true-icon{
+    color: #d3071f;
+}
 
 /* ======= Owl-Theme Custom style ======= */
 .owl-theme .owl-nav.disabled + .owl-dots {
@@ -4863,6 +4866,7 @@ padding-bottom: 5px;
     display: block;
     text-align: center;
     color: #fff;
+    margin-top: 14px;
 }
 .footer .social-icons li > a {
     font-size: 18px;

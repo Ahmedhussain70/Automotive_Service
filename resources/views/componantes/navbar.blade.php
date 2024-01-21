@@ -23,13 +23,18 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span> </button>
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown"> <a class="nav-link  dropdown-toggle {{ request()->is('/') ? 'active' : ''}}" href="/">Home </a>
+                <ul class="navbar-nav sidebar-nav ms-auto">
+                    <li class="nav-item dropdown"> <a class="nav-link  dropdown-toggle {{ request()->is('/') ? 'active' : ''}}" href="#home">Home </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link {{ request()->is('about') ? 'active' : ''}}" href="about">About</a></li>
-                    <li class="nav-item dropdown"> <a class="nav-link" href="services.blade.php" role="button" >Services</a>
+                    <li class="nav-item"><a class="nav-link {{ request()->is('#about') ? 'active' : ''}}" href="#about">About</a></li>
+                    <li class="nav-item dropdown"> <a class="nav-link"  role="button" href="#Services">Services</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="contact.blade.php">Contact</a></li>
+                    <li class="nav-item dropdown"> <a class="nav-link"  role="button" href="#Process" >Process</a>
+                    </li>
+                    <li class="nav-item dropdown"> <a class="nav-link" role="button" href="#Team">Team</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#Our Blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
                 </ul>
                 <div class="navbar-right">
                     <div class="wrap">
@@ -57,7 +62,6 @@
     <script src="/js/jquery.magnific-popup.js"></script>
     <script src="/js/select2.js"></script>
     <script src="/js/datepicker.js"></script>
-    <script src="/js/YouTubePopUp.js"></script>
     <script src="/js/before-after.js"></script>
     <script src="/js/custom.js"></script>
 </body>

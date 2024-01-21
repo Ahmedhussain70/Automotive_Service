@@ -11,7 +11,7 @@
     <!-- Navbar -->
 
     <!-- Slider -->
-    <header class="header slider-fade">
+    <header class="header slider-fade" id=home>
         <div class="owl-carousel owl-theme">
             <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
             <div class="text-left item bg-img" data-overlay-dark="4" data-background="img/slider/1.jpg">
@@ -58,7 +58,7 @@
     <!-- divider line -->
     <div class="line-vr-section"></div>
     <!-- About -->
-    <section class="about section-padding">
+    <section class="about section-padding" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 valign animate-box" data-animate-effect="fadeInLeft">
@@ -69,7 +69,7 @@
                                 <a href="https://youtu.be/qOLM7jyxRBU" class="btn vid">
                                     <svg width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="none">
                                         <circle class="circle" cx="50" cy="50" r="48" stroke="white" stroke-width="2" fill="none" />
-                                    </svg> <i class="fa-solid fa-play"></i> </a>
+                                    </svg> <i class="fa-solid fa-play mt-4"></i> </a>
                             </div>
                         </div>
                         <div class="award-icon animate-box" data-animate-effect="fadeInUp">
@@ -87,19 +87,19 @@
                     <p class="mb-30">Car repair quisque sodales dui ut varius vestibulum drana tortor turpis porttiton tellus eu euismod nisl massa ut odio in the miss volume placerat urna, a lacinia eros nunta urna mauris, vehicula rutrum tempus in the interdum felis.</p>
                     <ul class="list-unstyled list mb-30">
                         <li>
-                            <div class="list-icon"> <span class="ti-check"></span> </div>
+                            <div class="list-icon"> <i class="fa-solid fa-check true-icon"></i> </div>
                             <div class="list-text">
                                 <p>We offer multiple services</p>
                             </div>
                         </li>
                         <li>
-                            <div class="list-icon"> <span class="ti-check"></span> </div>
+                            <div class="list-icon">  <i class="fa-solid fa-check true-icon"></i> </div>
                             <div class="list-text">
                                 <p>Multiple car repair locations</p>
                             </div>
                         </li>
                         <li>
-                            <div class="list-icon"> <span class="ti-check"></span> </div>
+                            <div class="list-icon"> <i class="fa-solid fa-check true-icon"></i> </div>
                             <div class="list-text">
                                 <p>Original products</p>
                             </div>
@@ -113,7 +113,7 @@
     <!-- divider line -->
     <div class="line-vr-section"></div>
     <!-- Services -->
-    <section class="services1 section-padding">
+    <section class="services1 section-padding" id="Services">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center mb-30">
@@ -200,7 +200,7 @@
     <!-- divider line -->
     <div class="line-vr-section"></div>
     <!-- Process -->
-    <section class="process section-padding bg-white">
+    <section class="process section-padding bg-white" id="Process">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12 text-center mb-30">
@@ -299,14 +299,14 @@
             <div class="row">
                 <div class="text-center col-md-12">
                     <a class="vid" href="https://youtu.be/qOLM7jyxRBU">
-                        <div class="vid-butn"> <span class="icon"> <i class="fa-solid fa-play"></i> </span> </div>
+                        <div class="vid-butn"> <span class="icon"> <i class="fa-solid fa-play mt-4"></i> </span> </div>
                     </a>
                 </div>
             </div>
         </div>
     </section>
     <!-- Team -->
-    <section class="team section-padding bg-white">
+    <section class="team section-padding bg-white" id="Team">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center mb-30">
@@ -367,7 +367,7 @@
     <!-- divider line -->
     <div class="line-vr-section"></div>
     <!-- Blog -->
-    <section class="blog1 section-padding">
+    <section class="blog1 section-padding" id="Our Blog">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center mb-30">
@@ -387,7 +387,7 @@
                             <div class="wrapper-title">
                                 <h6>Repair</h6>
                                 <h4>Tips for Winterizing Your Car</h4> 
-                                <span class="icon"> <i class="fa-solid fa-book-open-reader"></i></span>
+                                <span class="icon"> <i class="fa-solid fa-book-open-reader mt-3"></i></span>
                             </div>
                         </div>
                     </div>
@@ -397,7 +397,7 @@
                             <div class="wrapper-title">
                                 <h6>Tire</h6>
                                 <h4>How to Change a Flat Tire</h4> 
-                                <span class="icon"> <i class="fa-solid fa-book-open-reader"></i></span>
+                                <span class="icon"> <i class="fa-solid fa-book-open-reader mt-3"></i></span>
                             </div>
                         </div>
                     </div>
@@ -406,7 +406,7 @@
                             <div class="wrapper-img"> <img src="img/blog/6.jpg" class="img-fluid rounded-1"> </div>
                             <div class="wrapper-title">
                                 <h6>Engine</h6>
-                                <h4>Why Does My Car Not Start?</h4> <span class="icon"> <i class="fa-solid fa-book-open-reader"></i></span>
+                                <h4>Why Does My Car Not Start?</h4> <span class="icon"> <i class="fa-solid fa-book-open-reader mt-3"></i></span>
                             </div>
                         </div>
                     </div>
@@ -415,7 +415,7 @@
                             <div class="wrapper-img"> <img src="img/blog/3.jpg" class="img-fluid rounded-1"> </div>
                             <div class="wrapper-title">
                                 <h6>Car Repair</h6>
-                                <h4>Old Car Engine Repair</h4> <span class="icon"> <i class="fa-solid fa-book-open-reader"></i></span>
+                                <h4>Old Car Engine Repair</h4> <span class="icon"> <i class="fa-solid fa-book-open-reader mt-3"></i></span>
                             </div>
                         </div>
                     </div>
@@ -424,7 +424,7 @@
                             <div class="wrapper-img"> <img src="img/blog/1.jpg" class="img-fluid rounded-1"> </div>
                             <div class="wrapper-title">
                                 <h6>Mechanic</h6>
-                                <h4>Signs Of Transmission Failure</h4> <span class="icon"> <i class="fa-solid fa-book-open-reader"></i></span>
+                                <h4>Signs Of Transmission Failure</h4> <span class="icon"> <i class="fa-solid fa-book-open-reader mt-3"></i></span>
                             </div>
                         </div>
                     </div>
@@ -434,7 +434,7 @@
                             <div class="wrapper-img"> <img src="img/blog/5.jpg" class="img-fluid rounded-1"> </div>
                             <div class="wrapper-title">
                                 <h6>Battery</h6>
-                                <h4>How to Change a Car Battery</h4> <span class="icon"> <i class="fa-solid fa-book-open-reader"></i></span>
+                                <h4>How to Change a Car Battery</h4> <span class="icon"> <i class="fa-solid fa-book-open-reader mt-3"></i></span>
                             </div>
                         </div>
                     </div>
@@ -444,7 +444,7 @@
         </div>
     </section>
     <!-- Appointment -->
-    <section class="appointment">
+    <section class="appointment" id="Contact">
         <div class="background bg-img bg-fixed section-padding pb-0" data-background="img/slider/2.jpg" data-overlay-dark="5">
             <div class="container">
                 <div class="row">
