@@ -4961,6 +4961,7 @@ padding-bottom: 5px;
     -o-transition: all 400ms linear;
     transition: all 400ms linear;
 }
+
 .progress-wrap.active-progress {
     opacity: 1;
     visibility: visible;
@@ -5006,6 +5007,20 @@ padding-bottom: 5px;
     stroke: #d3071f;
 }
 
+#btn-up {
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    border-radius: 50px;
+    bottom: 30px;
+    right: 30px;
+    background-color: red;
+    /* background-color: #70008d; */
+    color: white;
+    z-index: 2;
+  }
 
 /* ======= Responsive style ======= */
 @media (min-width: 1200px) {

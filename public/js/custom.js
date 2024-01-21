@@ -26,6 +26,24 @@
 
 ----------------------------------------------------------- */
 
+let btn = document.getElementById("btn-up");
+
+window.onscroll = function () {
+    if (scrollY >= 500) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  
+    btn.onclick = function () {
+      scroll({
+        left: 0,
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+  };
+
 $(function () {
     
     "use strict";
@@ -373,54 +391,58 @@ $(function () {
     });
     
     // Scroll back to top
-    var progressPath = document.querySelector('.progress-wrap path');
-    var pathLength = progressPath.getTotalLength();
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-    progressPath.style.strokeDashoffset = pathLength;
-    progressPath.getBoundingClientRect();
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-    var updateProgress = function () {
-        var scroll = $(window).scrollTop();
-        var height = $(document).height() - $(window).height();
-        var progress = pathLength - (scroll * pathLength / height);
-        progressPath.style.strokeDashoffset = progress;
-    }
-    updateProgress();
-    $(window).scroll(updateProgress);
-    var offset = 150;
-    var duration = 550;
-    jQuery(window).on('scroll', function () {
-        if (jQuery(this).scrollTop() > offset) {
-            jQuery('.progress-wrap').addClass('active-progress');
-        } else {
-            jQuery('.progress-wrap').removeClass('active-progress');
-        }
-    });
-    jQuery('.progress-wrap').on('click', function (event) {
-        event.preventDefault();
-        jQuery('html, body').animate({
-            scrollTop: 0
-        }, duration);
-        return false;
-    }) 
+//     var progressPath = document.querySelector('.progress-wrap');
+//     var pathLength = progressPath.getTotalLength();
+//     progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+//     progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+//     progressPath.style.strokeDashoffset = pathLength;
+//     progressPath.getBoundingClientRect();
+//     progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+//     var updateProgress = function () {
+//         var scroll = $(window).scrollTop();
+//         var height = $(document).height() - $(window).height();
+//         var progress = pathLength - (scroll * pathLength / height);
+//         progressPath.style.strokeDashoffset = progress;
+//     }
+//     updateProgress();
+//     $(window).scroll(updateProgress);
+//     var offset = 150;
+//     var duration = 550;
+//     jQuery(window).on('scroll', function () {
+//         if (jQuery(this).scrollTop() > offset) {
+//             jQuery('.progress-wrap').addClass('active-progress');
+//         } else {
+//             jQuery('.progress-wrap').removeClass('active-progress');
+//         }
+//     });
+//     jQuery('.progress-wrap').on('click', function (event) {
+//         event.preventDefault();
+//         jQuery('html, body').animate({
+//             scrollTop: 0
+//         }, duration);
+//         return false;
+//     }) 
     
-    // Reveal Effect
-    var scroll = window.requestAnimationFrame
-    ||
-    // IE Fallback
-    function (callback) {
-      window.setTimeout(callback, 3000)
-    };
-    var elementsToShow = document.querySelectorAll('.reveal-effect');
-    function loop() {
-    Array.prototype.forEach.call(elementsToShow, function (element) {
-      if (isElementInViewport(element)) {
-        element.classList.add('animated');
-      }
-    });
-    scroll(loop);
-   }
+//     // Reveal Effect
+//     var scroll = window.requestAnimationFrame
+//     ||
+//     // IE Fallback
+//     function (callback) {
+//       window.setTimeout(callback, 3000)
+//     };
+//     var elementsToShow = document.querySelectorAll('.reveal-effect');
+//     function loop() {
+//     Array.prototype.forEach.call(elementsToShow, function (element) {
+//       if (isElementInViewport(element)) {
+//         element.classList.add('animated');
+//       }
+//     });
+//     scroll(loop);
+//    }
+
+
+  
+
     // Call the loop for the first time
     loop();
     // Helper function from: http://stackoverflow.com/a/7557433/274826

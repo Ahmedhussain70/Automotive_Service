@@ -12,6 +12,14 @@
     <title>CAREX</title>
 </head>
 <body>
+<!-- <div class="progress-wrap cursor-pointer" id="btn-up">
+        <i class="fa-solid fa-arrow-up progress-circle svg-content"></i>
+    </div> -->
+    <button id="btn-up" class="col-lg-12 col-12">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- Cursor -->
+    <div class="cursor js-cursor"></div>
 <nav class="navbar navbar-expand-lg">
         <div class="container">
             <!-- Logo -->
