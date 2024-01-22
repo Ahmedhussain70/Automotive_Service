@@ -14,7 +14,7 @@
                             <div class="col-lg-9 col-md-12">
                                 <h6>Welcome to Carex</h6>
                                 <h1>Auto Service, Maintenance <span>&</span> Repair</h1>
-                                <a href="#0" class="button-1 ">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="BookNow" class="button-1 ">Book Now <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

@@ -42,7 +42,7 @@
  40. toTop Button style
  41. Responsive (Media Query)
  42. Overlay Effect Bg image
- 
+ 43. Login & Register
 ----------------------------------------------------------------------------------- */
 
 
@@ -1038,6 +1038,12 @@ hr {
 .nav-scroll .navbar-right .wrap .text h5 a {
     color: #101010;
 }
+
+.user{
+    font-size: larger;
+    margin-top: 5px;
+}
+
 /* Navbar Media Query */
 @media screen and (min-width: 992px) {
     .navbar .dropdown-menu {
@@ -5091,8 +5097,7 @@ padding-bottom: 5px;
     .footer-bottom .footer-social {
         float: left;
     }
-}
-
+} 
 
 /* ======= Overlay Effect Bg image ======= */
 [data-overlay-dark] {

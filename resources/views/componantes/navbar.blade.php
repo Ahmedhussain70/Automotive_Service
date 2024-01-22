@@ -32,7 +32,7 @@
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav sidebar-nav ms-auto">
-                    <li class="nav-item dropdown"> <a class="nav-link  dropdown-toggle {{ request()->is('/') ? 'active' : ''}}" href="#home">Home </a>
+                    <li class="nav-item dropdown"> <a class="nav-link  dropdown-toggle {{ request()->is('#home') ? 'active' : ''}}" href="#home">Home </a>
                     </li>
                     <li class="nav-item"><a class="nav-link {{ request()->is('#about') ? 'active' : ''}}" href="#about">About</a></li>
                     <li class="nav-item dropdown"> <a class="nav-link"  role="button" href="#Services">Services</a>
@@ -43,8 +43,10 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#Our Blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
+                    <li class="nav-item nav-link-1 ms-5"><a class="nav-link ms-5" href="login"
+                  ><i class="fa-regular fa-user user"></i></a></li>
                 </ul>
-                <div class="navbar-right">
+                <!-- <div class="navbar-right">
                     <div class="wrap">
                         <div class="icon"> <i class="carex-phone-call"></i> </div>
                         <div class="text">
@@ -52,7 +54,9 @@
                             <h5><a href="tel:8551004444">855 100 4444</a></h5>
                         </div>
                     </div>
-                </div>
+                </div> -->
+                <!-- <a class="nav-link-1 ms-5" href="login.php"
+                  ><i class="fa-regular fa-user user"></i></a> -->
             </div>
         </div>
     </nav>

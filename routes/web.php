@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('./pages/index');
 });
 
-Route::get('about', function () {
-    return view('./pages/about');
+// Route::get('about', function () {
+//     return view('./pages/about');
+// });
+
+Route::get('BookNow', function () {
+    return view('./pages/BookNow');
+});
+
+Route::get('login', function () {
+    return view('./pages/Auth/login');
+});
+
+Route::get('sginup', function () {
+    return view('./pages/Auth/sginup');
 });
