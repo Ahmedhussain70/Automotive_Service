@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="shortcut icon" href="img/icon.png" type='image/x-icon'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/plugins.css" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <title>CAREX</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
             <!-- Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span> </button>
             <!-- Menu -->
-            <div class="collapse navbar-collapse" id="navbar">
+            <div class="collapse navbar-collapse menu" id="navbar">
                 <ul class="navbar-nav sidebar-nav ms-auto">
                     <li class="nav-item dropdown"> <a class="nav-link  dropdown-toggle {{ request()->is('#home') ? 'active' : ''}}" href="#home">Home </a>
                     </li>
@@ -45,7 +46,14 @@
                     <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
                     <li class="nav-item nav-link-1 ms-5"><a class="nav-link ms-5" href="login"
                   ><i class="fa-regular fa-user user"></i></a></li>
+                  <!-- <li class="nav-item nav-link-1 ms-5"><button onclick="lightmode()">light</button></li> -->
+                 <div class="dark-light" style="
+    margin-top: 12px;">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
                 </ul>
+
                 <!-- <div class="navbar-right">
                     <div class="wrap">
                         <div class="icon"> <i class="carex-phone-call"></i> </div>

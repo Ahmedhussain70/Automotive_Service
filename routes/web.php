@@ -21,10 +21,6 @@ Route::get('/', function () {
 //     return view('./pages/about');
 // });
 
-Route::get('BookNow', function () {
-    return view('./pages/BookNow');
-});
-
 Route::get('login', function () {
     return view('./pages/Auth/login');
 });

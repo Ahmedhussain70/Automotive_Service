@@ -44,6 +44,35 @@ window.onscroll = function () {
     };
   };
 
+  /* -----------------------------------------------------------
+
+Dark mode & light mode
+
+----------------------------------------------------------- */
+
+ const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "light-mode"){
+            body.classList.add("light");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("light");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("light")){
+            localStorage.setItem("mode" , "dark-mode");
+        }else{
+            localStorage.setItem("mode" , "light-mode");
+        }
+      });
+
+
 $(function () {
     
     "use strict";

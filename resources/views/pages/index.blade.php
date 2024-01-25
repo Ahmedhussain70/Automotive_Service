@@ -14,7 +14,7 @@
                             <div class="col-lg-9 col-md-12">
                                 <h6>Welcome to Carex</h6>
                                 <h1>Auto Service, Maintenance <span>&</span> Repair</h1>
-                                <a href="BookNow" class="button-1 ">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="#Contact" class="button-1 ">Book Now <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                             <div class="col-lg-12 col-md-12 text-center">
                                 <h6>Welcome to Carex</h6>
                                 <h1>Your vehicle is in<br>safe hands</h1>
-                                <a href="#0" class="button-1 mt-15">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="#Contact" class="button-1 mt-15">Book Now <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                             <div class="col-lg-12 col-md-12 text-end">
                                 <h6>Welcome to Carex</h6>
                                 <h1>Performance<br>Without Compromise</h1>
-                                <a href="#0" class="button-1 mt-15">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="#Contact" class="button-1 mt-15">Book Now <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -232,7 +232,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-12 text-center mt-60"> <a href="#" class="button-2">Book Now <i class="fa-solid fa-arrow-right"></i></a> </div>
+                <div class="col-md-12 text-center mt-60"> <a href="#Contact" class="button-2">Book Now <i class="fa-solid fa-arrow-right"></i></a> </div>
             </div>
         </div>
     </section>
