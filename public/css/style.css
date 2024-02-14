@@ -79,10 +79,6 @@ nav{
     z-index: 100;
 }
 
-body.dark nav{
-    border: 1px solid #393838;
-}
-
 nav .navbar{
     position: relative;
     height: 100%;
@@ -96,13 +92,7 @@ nav .navbar{
     justify-content: space-between;
 }
 
-nav .navbar .sidebarOpen{
-    color: var(--text-color);
-    font-size: 25px;
-    padding: 5px;
-    cursor: pointer;
-    display: none;
-}
+
 
 nav .nav-bar .logo a{
     font-size: 25px;
@@ -157,18 +147,9 @@ nav .nav-bar .logo a{
     align-items: center;
 }
 
-.darkLight-searchBox .dark-light,
-.darkLight-searchBox .searchToggle{
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 5px;
-}
 
-.dark-light i,
-.searchToggle i{
+
+.dark-light i{
     position: absolute;
     color: var(--text-color);
     font-size: 22px;
@@ -191,7 +172,11 @@ nav .nav-bar .logo a{
     pointer-events: none;
 }
 
-
+.alert-success{
+    background-color: #198754 !important;
+    z-index: 100 !important;
+    border: unset !important;
+}
 
 
 /* ----------------------------------------------------------------------------------------------------------- */
@@ -343,7 +328,7 @@ button:hover {
     border: none;
 }
 select {
-    padding: 10px;
+    padding: 16px;
     border-radius: 5px;
 }
 
@@ -1869,9 +1854,9 @@ hr {
     height: 98px;
     width: 98px;
     cursor: pointer;
-    -webkit-transition-timing-function: cubic-bezier(0.4, 0.08, 0, 0.97);
+    /* -webkit-transition-timing-function: cubic-bezier(0.4, 0.08, 0, 0.97);
     -o-transition-timing-function: cubic-bezier(0.4, 0.08, 0, 0.97);
-    transition-timing-function: cubic-bezier(0.4, 0.08, 0, 0.97);
+    transition-timing-function: cubic-bezier(0.4, 0.08, 0, 0.97); */
     color: #d3071f;
     /* border: 2px solid #d3071f; */
     -webkit-transform: scale(0.7);
@@ -1894,9 +1879,9 @@ hr {
   -webkit-transition: all 0.8s;
   -o-transition: all 0.8s;
   transition: all 0.8s;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0.08, 0, 0.97);
+  /* -webkit-transition-timing-function: cubic-bezier(0.4, 0.08, 0, 0.97);
   -o-transition-timing-function: cubic-bezier(0.4, 0.08, 0, 0.97);
-  transition-timing-function: cubic-bezier(0.4, 0.08, 0, 0.97);
+  transition-timing-function: cubic-bezier(0.4, 0.08, 0, 0.97); */
 }
 .about-two-img .img2 .play-button .btn:hover .circle {
   stroke-dashoffset: 0;
@@ -1920,9 +1905,9 @@ hr {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
+    /* -webkit-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); */
     color: #fff;
     font-size: 30px;
     padding-top: 5px;

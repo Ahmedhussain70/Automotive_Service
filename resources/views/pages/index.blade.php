@@ -1,7 +1,14 @@
 @include('../componantes/loading')
 @include('../componantes/navbar')
     <!-- Progress scroll totop -->
-
+    @if(Session::has('success'))
+        <div id="alertt" class="alert alert-success">
+            {{ Session::get('success') }}
+            @php
+                Session::forget('success');
+            @endphp
+        </div>
+        @endif
 
     <!-- Slider -->
     <header class="header slider-fade" id=home>
@@ -11,7 +18,7 @@
                 <div class="v-middle caption">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-9 col-md-12">
+                            <div class="col-lg-9 col-md-12 col-12">
                                 <h6>Welcome to Carex</h6>
                                 <h1>Auto Service, Maintenance <span>&</span> Repair</h1>
                                 <a href="#Contact" class="button-1 ">Book Now <i class="fa-solid fa-arrow-right"></i></a>
@@ -49,7 +56,7 @@
         </div>
     </header>
     <!-- divider line -->
-    <div class="line-vr-section"></div>
+    <!-- <div class="line-vr-section"></div> -->
     <!-- About -->
     <section class="about section-padding" id="about">
         <div class="container">
@@ -463,71 +470,65 @@
                                 <h4>Book For A Service</h4>
                             </div>
                             <div class="booking-inner clearfix">
-                                <form class="form1 clearfix">
+                                <form class="form1 clearfix" action="{{ url('/booking') }}" method="post" enctype="multipart/form-data">
+                                @csrf
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="input1_wrapper">
-                                                <label>Your Name</label>
                                                 <div class="input2_inner">
-                                                    <input type="text" class="form-control input" placeholder="Your Name" required>
+                                                    <input name="name" type="text" class="form-control input" placeholder="Your Name" required>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="input1_wrapper">
-                                                <label>Your Phone</label>
                                                 <div class="input2_inner">
-                                                    <input type="text" class="form-control input" placeholder="Your Phone" required>
+                                                    <input name="phone" type="text" class="form-control input" placeholder="Your Phone" required>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="input1_wrapper">
-                                                <label>Service Date</label>
-                                                <div class="input1_inner">
-                                                    <input type="text" class="form-control input datepicker" placeholder="Service Date" required>
+                                                <div class="input2_inner">
+                                                    <input name="service_Date" type="date" class="form-control input" placeholder="Service Date" required>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="select1_wrapper">
-                                                <label>Service Time</label>
                                                 <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
+                                                    <select name="service_Time" class="select2 select" style="width: 100%">
                                                         <option value="0">Service Time</option>
-                                                        <option value="1">10:00 am</option>
-                                                        <option value="2">11:00 am</option>
-                                                        <option value="3">12:00 pm</option>
-                                                        <option value="4">14:00 pm</option>
-                                                        <option value="5">16:00 pm</option>
-                                                        <option value="6">18:00 pm</option>
-                                                        <option value="7">20:00 pm</option>
+                                                        <option value="10:00 am">10:00 am</option>
+                                                        <option value="11:00 am">11:00 am</option>
+                                                        <option value="12:00 pm">12:00 pm</option>
+                                                        <option value="1:00 pm">1:00 pm</option>
+                                                        <option value="2:00 pm">2:00 pm</option>
+                                                        <option value="3:00 pm">3:00 pm</option>
+                                                        <option value="4:00 pm">4:00 pm</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="select1_wrapper">
-                                                <label>Select A Service</label>
                                                 <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
+                                                    <select name="service_type" class="select2 select" style="width: 100%">
                                                         <option value="0">Services</option>
-                                                        <option value="1">Car Towing</option>
-                                                        <option value="2">Hail Damage</option>
-                                                        <option value="3">Car Wash</option>
+                                                        <option value="Tire Change & Repair">Tire Change & Repair</option>
+                                                        <option value="Change Oil & Filter">Change Oil & Filter</option>
+                                                        <option value="Engine Maintenance">Engine Maintenance</option>
+                                                        <option value="Battery Replacement">Battery Replacement</option>
+                                                        <option value="Car Wash & Polish">Car Wash & Polish</option>
+                                                        <option value="ABS Working & Repair">ABS Working & Repair</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="select1_wrapper">
-                                                <label>Service Master</label>
-                                                <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
-                                                        <option value="0">Service Master</option>
-                                                        <option value="1">Micheal</option>
-                                                        <option value="2">Daniel</option>
-                                                    </select>
+                                            <div class="input1_wrapper">
+                                                <div class="input2_inner">
+                                                    <input name="car_model" type="text" class="form-control input" placeholder="Car Model" required>
                                                 </div>
                                             </div>
                                         </div>

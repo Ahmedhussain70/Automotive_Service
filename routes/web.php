@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\autocontrol;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,5 @@ Route::get('login', function () {
 Route::get('sginup', function () {
     return view('./pages/Auth/sginup');
 });
+
+Route::post('/booking', [autocontrol::class, "booking"]);

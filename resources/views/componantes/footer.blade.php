@@ -65,10 +65,10 @@
                         <div class="widget clearfix usful-links">
                             <h3 class="widget-title">Quick Links</h3>
                             <ul>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="team.html">Team</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#Services">Services</a></li>
+                                <li><a href="#Team">Team</a></li>
+                                <li><a href="#Contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
             <div class="bottom-footer-text">
                 <div class="row copyright">
                     <div class="col-md-12">
-                        <p class="mb-0">&copy;2024 <a href="#">DuruThemes</a>. All rights reserved.</p>
+                        <p class="mb-0">&copy;2024 <a href="#">ElShrouk Academy</a>. All rights reserved.</p>
                     </div>
                 </div>
             </div>

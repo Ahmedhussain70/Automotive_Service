@@ -71,7 +71,15 @@ Dark mode & light mode
             localStorage.setItem("mode" , "light-mode");
         }
       });
+//---------------------------------------------------------------------------
+setTimeout(() => {
+    const alertt = document.getElementById('alertt');
 
+    alertt.style.display = 'none';
+
+  }, 2000);
+
+//---------------------------------------------------------------------------
 
 $(function () {
     
