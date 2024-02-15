@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('booking', function (Blueprint $table) {
-            $table->id('bookingID');
-            $table->string('bookingName');
+        Schema::create('technical', function (Blueprint $table) {
+            $table->id('techID');
+            $table->string('techName');
             $table->string('phone')->unique();
-            $table->date('service_Date')->nullable();
-            $table->string('service_Time');
-            $table->string('service_type');
-            $table->string('car_model');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->foreign('techID')->references('depID')->on('department');
         });
     }
 
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('booking');
+        Schema::dropIfExists('technical');
     }
 };
