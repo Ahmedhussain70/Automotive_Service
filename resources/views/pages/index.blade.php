@@ -127,7 +127,7 @@
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
                         <div class="item">
-                            <a href="pages/tirechange">
+                            <a href="tirechange">
                                 <div class="wrap">
                                     <div class="wrapper-img"> <img src="img/services/1.jpg" class="img-fluid rounded-1"> </div>
                                     <div class="wrapper-title">
