@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\autocontrol;
+use App\Http\Controllers\admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +31,17 @@ Route::get('sginup', function () {
     return view('./pages/Auth/sginup');
 });
 
+Route::get('insertproduct', function () {
+    return view('./pages/admin/insertproduct');
+});
+
+// Route::get('tirechange', function () {
+//     return view('./pages/tirechange');
+// });
+
+
 Route::post('/booking', [autocontrol::class, "booking"]);
+
+// Route::get('pages/admin/insertproduct', [admin::class, "create"]);
+Route::get('tirechange', [admin::class, "index"]);
+Route::post('/insert', [admin::class, "store"]);

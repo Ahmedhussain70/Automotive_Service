@@ -10,7 +10,7 @@ class productmodel extends Model
     protected $table = "product";
     public $timestamps = false;
     protected $fillable = [
-        'Image',
+        'image',
         'phone',
         'proName',
         'price',
