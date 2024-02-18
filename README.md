@@ -3,10 +3,6 @@
 
     git clone https://github.com/Ahmedhussain70/Automotive_Service.git
 
-#### to handel configration 
-
-    copy .env.example and rename it .env
-
 #### install dependacies
 
     composer install
