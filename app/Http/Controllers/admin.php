@@ -26,7 +26,7 @@ class admin extends Controller
             return redirect('insertproduct')->with('success', 'Your Booking is Created Successfully.');
     }
 
-    // public function create(){
-    //     return view('pages/admin/insertproduct');
-    // }
+    public function delete(){
+        // return view('pages/admin/insertproduct');
+    }
 }

@@ -44,7 +44,7 @@ class autocontrol extends Controller
     public function booking(Request $request)
     {
         DB::table('booking')->insert([
-            'name' => $request->name,
+            'bookingName' => $request->bookingName,
             'phone' => $request->phone,
             'service_Date' => $request->service_Date,
             'service_Time' => $request->service_Time,

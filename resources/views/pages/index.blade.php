@@ -476,7 +476,7 @@
                                         <div class="col-md-6">
                                             <div class="input1_wrapper">
                                                 <div class="input2_inner">
-                                                    <input name="name" type="text" class="form-control input" placeholder="Your Name" required>
+                                                    <input name="bookingName" type="text" class="form-control input" placeholder="Your Name" required>
                                                 </div>
                                             </div>
                                         </div>
