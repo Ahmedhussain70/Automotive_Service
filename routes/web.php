@@ -31,8 +31,12 @@ Route::get('sginup', function () {
     return view('./pages/Auth/sginup');
 });
 
-Route::get('insertproduct', function () {
-    return view('./pages/admin/insertproduct');
+Route::get('insertTire', function () {
+    return view('./pages/admin/insertTire');
+});
+
+Route::get('dashboard', function () {
+    return view('./pages/admin/index');
 });
 
 // Route::get('tirechange', function () {
