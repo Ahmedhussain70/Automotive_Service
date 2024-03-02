@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="css/styles.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
@@ -7,7 +8,7 @@
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="./index.html" class="text-nowrap logo-img">
+          <a href="dashboard" class="text-nowrap logo-img">
             <img src="img/logo-dark.png" width="180" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -19,7 +20,7 @@
           <ul id="sidebarnav">
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Home</span>
+              <span class="hide-menu">Administrator</span>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link" href="dashboard" aria-expanded="false">
@@ -35,6 +36,14 @@
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
                 <span class="hide-menu">Branches</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="insertproduct" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">Add Products</span>
               </a>
             </li>
             <li class="nav-small-cap">
@@ -55,18 +64,6 @@
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
                 <span class="hide-menu">Sales</span>
-              </a>
-            </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Add Products</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="insertTire" aria-expanded="false">
-                <span>
-                  <i class="ti ti-layout-dashboard"></i>
-                </span>
-                <span class="hide-menu">Tires</span>
               </a>
             </li>
             <li class="nav-small-cap">

@@ -4,7 +4,8 @@
 <div class="container">
       <div class="row d-flex justify-content-center mt-5">
         <div class="col-lg-5 col-md-6 col-sm-12">
-      <form action="sginup-action.php" method="post" class="mb-5">
+      <form action="{{url('sginup')}}" method="post" class="mb-5">
+      @csrf
           <div class="login mt-5">
             <h2 class="mb-3 mt-3">Sign Up</h2>
         <div class="mt-5">

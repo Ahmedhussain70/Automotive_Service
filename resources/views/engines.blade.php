@@ -11,7 +11,7 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
     <link rel="stylesheet" href="css/plugins.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Tire Change</title>
+    <title>Oils</title>
     <style>
         body{
             margin-top: 150px;
@@ -22,9 +22,11 @@
     <div class="container">
         <div class="row">
         @foreach ($products as $product)
+        @if($product->category === "Engine")
+    
         <div class="col-12 col-md-6 col-lg-3">
-            <div class="card mt-24" style="width: 15rem;">
-      <img class="card-img-top" style="height: 250px;" src="{{ asset('images/'.$product->image) }}">
+            <div class="card mt-24 mb-5" style="width: 15rem;">
+      <img class="card-img-top" style="height: 250px !important;" src="{{ asset('images/'.$product->image) }}">
       <div class="card-body">
         <h5 class="card-title">{{$product->proName}}</h5>
         <h6 class="card-text">{{$product->price}} L.E</h6>
@@ -33,6 +35,7 @@
       </div>
     </div>
         </div>
+        @endif
     @endforeach
         </div>
     </div>

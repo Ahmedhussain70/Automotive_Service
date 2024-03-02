@@ -11,6 +11,28 @@
     <link rel="stylesheet" href="css/plugins.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>CAREX</title>
+    <style>
+
+.account {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: contain;
+  border: 1px solid;
+  border-color: red;
+  background-color: black;
+}
+
+.account-name {
+  margin-left: 10px;
+  color: #fff;
+}
+    </style>
 </head>
 <body>
 <!-- <div class="progress-wrap cursor-pointer" id="btn-up">
@@ -44,14 +66,42 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#Our Blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
-                    <li class="nav-item nav-link-1 ms-5"><a class="nav-link ms-5" href="login"
-                  ><i class="fa-regular fa-user user"></i></a></li>
-                  <!-- <li class="nav-item nav-link-1 ms-5"><button onclick="lightmode()">light</button></li> -->
-                 <div class="dark-light" style="
-    margin-top: 12px;">
-                    <i class='bx bx-moon moon'></i>
-                    <i class='bx bx-sun sun'></i>
+                    <li class="nav-item nav-link ms-5">
+                      <div class="dark-light">
+                         <i class='bx bx-moon moon'></i>
+                         <i class='bx bx-sun sun'></i>
+                     </div>
+                  </li>
+                    @if (Auth::check())      
+                    <div class="navbar" style="background-color: transparent;">
+  <!-- Other navbar content -->
+  <div class="account nav-item dropdown">
+    <a href="javascript:void(0)" id="drop2"
+                  aria-expanded="false">
+                  <img src="/img/logo-light.png" alt="Profile" class="profile-pic">
+                  <span class="account-name">{{Auth::user()->name}}</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2" style="
+    margin-top: 200px;
+    width: 20px;">
+                  <div class="message-body">
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                    <i class="fa-regular fa-user" style="font-size: 17px;margin-top: -12px;"></i>
+                      <p class="mb-0 fs-3" style="
+    font-size: 15px !important;
+">My Profile</p>
+                    </a>
+                    <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                        <button type="submit" class="btn btn-outline-danger mx-3 mt-2 d-block">Logout</button>
+                    </form>
+                  </div>
                 </div>
+                </div>
+                    @else
+                    <li class="nav-item nav-link-1"><a class="nav-link ms-5" href="login"
+                  ><i class="fa-regular fa-user user"></i></a></li> @endif
+                  <!-- <li class="nav-item nav-link-1 ms-5"><button onclick="lightmode()">light</button></li> -->
                 </ul>
 
                 <!-- <div class="navbar-right">

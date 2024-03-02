@@ -10,8 +10,7 @@ use App\Models\productmodel;
 class admin extends Controller
 {
     public function index(){
-        $products = productmodel::all();
-        return view('tirechange' , compact("products"));
+
     }
 
     public function store(Request $request){
@@ -21,7 +20,8 @@ class admin extends Controller
                 'image' => $imageName,
                 'proName' => $request->proName,
                 'price' => $request->price,
-                'description' => $request->description
+                'description' => $request->description,
+                'category' => $request->category
             ]);
             return redirect('insertproduct')->with('success', 'Your Booking is Created Successfully.');
     }

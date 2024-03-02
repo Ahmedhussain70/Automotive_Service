@@ -6,15 +6,24 @@ use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\automodel as automodel;
 use Illuminate\Support\Facades\DB;
+use App\Models\productmodel;
 
 class autocontrol extends Controller
 {
         /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(string $page)
     {
+        $products = productmodel::all();
+        // return view('pages/oils' , compact("products"));
+        // return view('tires' , compact("products"));
+
+        if (!in_array($page, ['tires', 'oils','engines','battary','ABS'])) {
+            abort(404);
+          }
         
+          return view($page ,compact("products"));
     }
 
     /**

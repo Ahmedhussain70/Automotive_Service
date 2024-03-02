@@ -14,7 +14,8 @@ class productmodel extends Model
         'phone',
         'proName',
         'price',
-        'description'
+        'description',
+        'category'
     ];
     use HasFactory;
 }

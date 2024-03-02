@@ -127,7 +127,7 @@
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
                         <div class="item">
-                            <a href="tirechange">
+                            <a href="tires">
                                 <div class="wrap">
                                     <div class="wrapper-img"> <img src="img/services/1.jpg" class="img-fluid rounded-1"> </div>
                                     <div class="wrapper-title">
@@ -138,7 +138,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="services-single.html">
+                            <a href="oils">
                                 <div class="wrap">
                                     <div class="wrapper-img"> <img src="img/services/2.jpg" class="img-fluid rounded-1"> </div>
                                     <div class="wrapper-title">
@@ -149,7 +149,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="services-single.html">
+                            <a href="engines">
                                 <div class="wrap">
                                     <div class="wrapper-img"> <img src="img/services/3.jpg" class="img-fluid rounded-1"> </div>
                                     <div class="wrapper-title">
@@ -160,7 +160,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="services-single.html">
+                            <a href="battary">
                                 <div class="wrap">
                                     <div class="wrapper-img"> <img src="img/services/4.jpg" class="img-fluid rounded-1"> </div>
                                     <div class="wrapper-title">
@@ -182,7 +182,7 @@
                             </a>
                         </div>
                         <div class="item">
-                            <a href="services-single.html">
+                            <a href="ABS">
                                 <div class="wrap">
                                     <div class="wrapper-img"> <img src="img/services/6.jpg" class="img-fluid rounded-1"> </div>
                                     <div class="wrapper-title">

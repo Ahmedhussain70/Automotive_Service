@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('proName');
             $table->float('price');
             $table->string('description');
+            $table->string('category');
         });
     }
 

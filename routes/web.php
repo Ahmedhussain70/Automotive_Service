@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\autocontrol;
 use App\Http\Controllers\admin;
+use App\Http\Controllers\user;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ use App\Http\Controllers\admin;
 */
 
 Route::get('/', function () {
-    return view('./pages/index');
+    return view('index');
 });
 
 // Route::get('about', function () {
@@ -31,13 +32,14 @@ Route::get('sginup', function () {
     return view('./pages/Auth/sginup');
 });
 
-Route::get('insertTire', function () {
-    return view('./pages/admin/insertTire');
-});
-
 Route::get('dashboard', function () {
     return view('./pages/admin/index');
 });
+
+Route::get('insertproduct', function () {
+    return view('./pages/admin/AddProducts/insertproduct');
+});
+
 
 // Route::get('tirechange', function () {
 //     return view('./pages/tirechange');
@@ -47,5 +49,10 @@ Route::get('dashboard', function () {
 Route::post('/booking', [autocontrol::class, "booking"]);
 
 // Route::get('pages/admin/insertproduct', [admin::class, "create"]);
-Route::get('tirechange', [admin::class, "index"]);
+Route::get('/{pages}', [autocontrol::class, "index"]);
+// Route::get('tires', [autocontrol::class, "index"]);
 Route::post('/insert', [admin::class, "store"]);
+
+Route::post('/sginup', [user::class , "addUser"])->name('sginup');
+Route::post('/login', [user::class , "logIn"])->name('login');
+Route::post('logout', [user::class, 'logout'])->name('logout');

@@ -1,10 +1,19 @@
 @include('../componantes/loading')
 @include('../componantes/navbar')
+@if(Session::has('error'))
+        <div id="loginerror" class="alert alert-error">
+            {{ Session::get('error') }}
+            @php
+                Session::forget('error');
+            @endphp
+        </div>
+        @endif
 <link rel="stylesheet" href="css/Auth.css">
 <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-5 col-md-6 col-sm-12 mb-5">
-            <form action="" method="post">
+            <form action="{{url('login')}}" method="post">
+              @csrf
                 <div class="login">
                   <h2 class=" mb-3 mt-3">Sign In</h2>
                   <div class="mt-5">

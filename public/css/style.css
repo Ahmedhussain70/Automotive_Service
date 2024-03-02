@@ -178,6 +178,12 @@ nav .nav-bar .logo a{
     border: unset !important;
 }
 
+.alert-error{
+    background-color: #cd1414 !important;
+    color: white;
+    z-index: 100 !important;
+    border: unset !important;
+}
 
 /* ----------------------------------------------scroll------------------------------------------------------------- */
 

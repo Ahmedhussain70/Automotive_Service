@@ -76,7 +76,14 @@ setTimeout(() => {
     const alertt = document.getElementById('alertt');
 
     alertt.style.display = 'none';
+    const loginerror = document.getElementById('loginerror');
+    loginerror.style.display = 'none';
 
+  }, 2000);
+
+  setTimeout(() => {
+    const loginerror = document.getElementById('loginerror');
+    loginerror.style.display = 'none';
   }, 2000);
 
 //---------------------------------------------------------------------------
@@ -102,17 +109,21 @@ $(function () {
     var wind = $(window);
     
     // Navbar scrolling background
-    wind.on("scroll", function () {
-        var bodyScroll = wind.scrollTop(),
-            navbar = $(".navbar"),
-            logo = $(".navbar .logo> img");
-        if (bodyScroll > 100) {
-            navbar.addClass("nav-scroll");
-            logo.attr('src', 'img/logo-dark.png');
-        } else {
-            navbar.removeClass("nav-scroll");
-            logo.attr('src', 'img/logo-light.png');
-        }
+    wind.on("scroll", () => {
+      const bodyScroll = wind.scrollTop();
+      const navbar = $(".navbar");
+      const logo = $(".navbar .logo> img");
+      const account = $(".account-name");
+    
+      if (bodyScroll > 100) {
+        navbar.addClass("nav-scroll");
+        logo.attr('src', 'img/logo-dark.png');
+        account.css('color', 'black');
+      } else {
+        navbar.removeClass("nav-scroll");
+        logo.attr('src', 'img/logo-light.png');
+        account.css('color', 'white');
+      }
     });
     
     // Close navbar-collapse when a clicked
