@@ -170,23 +170,13 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="item">
-                            <a href="services-single.html">
-                                <div class="wrap">
-                                    <div class="wrapper-img"> <img src="img/services/5.jpg" class="img-fluid rounded-1"> </div>
-                                    <div class="wrapper-title">
-                                        <h6>05.</h6>
-                                        <h4>Car Wash & Polish</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+
                         <div class="item">
                             <a href="ABS">
                                 <div class="wrap">
                                     <div class="wrapper-img"> <img src="img/services/6.jpg" class="img-fluid rounded-1"> </div>
                                     <div class="wrapper-title">
-                                        <h6>06.</h6>
+                                        <h6>05.</h6>
                                         <h4>ABS Working & Repair</h4>
                                     </div>
                                 </div>
