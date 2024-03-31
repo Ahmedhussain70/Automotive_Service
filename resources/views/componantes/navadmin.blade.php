@@ -46,12 +46,20 @@
                 <span class="hide-menu">Add Products</span>
               </a>
             </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="users" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">Users</span>
+              </a>
+            </li>
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">Transactions</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="Booking" aria-expanded="false">
+              <a class="sidebar-link" href="booking" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -64,34 +72,6 @@
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
                 <span class="hide-menu">Sales</span>
-              </a>
-            </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">USERS</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="Visitors" aria-expanded="false">
-                <span>
-                  <i class="ti ti-article"></i>
-                </span>
-                <span class="hide-menu">Visitors</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="Engineers" aria-expanded="false">
-                <span>
-                  <i class="ti ti-alert-circle"></i>
-                </span>
-                <span class="hide-menu">Engineers</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="Technicals" aria-expanded="false">
-                <span>
-                  <i class="ti ti-cards"></i>
-                </span>
-                <span class="hide-menu">Technicals</span>
               </a>
             </li>
           </ul>

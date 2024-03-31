@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\productmodel;
+use App\Models\bookingmodel;
 
 class admin extends Controller
 {
     public function index(){
-
+        $booking = bookingmodel::all();
+        return view("pages.admin.booking" ,compact("booking"));
     }
 
     public function store(Request $request){

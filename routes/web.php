@@ -32,12 +32,27 @@ Route::get('sginup', function () {
     return view('./pages/Auth/sginup');
 });
 
+// Dashboard
+
+Route::group(['middleware' => ['admin']], function () {
+
 Route::get('dashboard', function () {
     return view('./pages/admin/index');
 });
 
 Route::get('insertproduct', function () {
     return view('./pages/admin/AddProducts/insertproduct');
+});
+
+Route::post('/insert', [admin::class, "store"]);
+
+Route::get('/users',  [user::class, "index"]);
+Route::get('/delete/{id}',[user::class,"delete"]);
+Route::put('/update/{id}',[user::class,"update"]);
+Route::get('/search', [user::class, 'search'])->name('search');
+
+Route::get('/booking', [admin::class, "index"]);
+
 });
 
 
@@ -48,11 +63,11 @@ Route::get('insertproduct', function () {
 
 Route::post('/booking', [autocontrol::class, "booking"]);
 
-// Route::get('pages/admin/insertproduct', [admin::class, "create"]);
+
 Route::get('/{pages}', [autocontrol::class, "index"]);
-// Route::get('tires', [autocontrol::class, "index"]);
-Route::post('/insert', [admin::class, "store"]);
+
+
 
 Route::post('/sginup', [user::class , "addUser"])->name('sginup');
 Route::post('/login', [user::class , "logIn"])->name('login');
-Route::post('logout', [user::class, 'logout'])->name('logout');
+Route::post('logout', [user::class, "logout"])->name('logout');
