@@ -49,7 +49,8 @@ Route::post('/insert', [admin::class, "store"]);
 Route::get('/users',  [user::class, "index"]);
 Route::get('/delete/{id}',[user::class,"delete"]);
 Route::put('/update/{id}',[user::class,"update"]);
-Route::get('/search', [user::class, 'search'])->name('search');
+Route::get('/searchUser', [user::class, 'search'])->name('searchUser');
+Route::get('/searchBooking', [admin::class, 'search'])->name('searchBooking');
 
 Route::get('/booking', [admin::class, "index"]);
 

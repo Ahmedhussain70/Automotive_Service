@@ -31,4 +31,66 @@ class admin extends Controller
     public function delete(){
         // return view('pages/admin/insertproduct');
     }
+
+    public function search(Request $request)
+    {
+        if($request->ajax())
+        {
+            $output="";
+            $booking =DB::table('booking')->where('bookingName','LIKE','%'.$request->search."%")
+            ->orWhere('bookingID','LIKE','%'.$request->search."%")->get();
+   
+            $output='';
+            if(count($booking)>0){
+        
+                 $output ='
+                 <meta name="csrf-token" content="csrf_token">
+                    <table class="table">
+                    <thead>
+                        <tr>
+                            <td>id</td>
+                            <td>Name</td>
+                            <td>Phone Number</td>
+                            <td>Service Date</td>
+                            <td>Service Time</td>
+                            <td>Service Type</td>
+                            <td>Car Model</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">';
+        
+                        foreach($booking as $key => $book){
+                            $output .='
+                            <tr>
+                            <th scope="row">'.$book->bookingID.'</th>
+                            <td>'.$book->bookingName.'</td>
+                            <td>'.$book->phone.'</td>
+                            <td>'.$book->service_Date.'</td>
+                            <td>'.$book->service_Time.'</td>
+                            <td>'.$book->service_type.'</td>
+                            <td>'.$book->car_model.'</td>
+                            <td>'.'
+                            <input type="hidden" name="_method" value="PUT">
+                            <input class="btn btn-info" type="submit" value="Accept">
+                            <a class="btn btn-Danger" href="">Reject</a>
+                            '.'</td>'.
+                            '</td>
+                            </tr>
+                            ';
+                        }
+        
+        
+        
+                 $output .= '
+                     </tbody>
+                    </table>';
+        
+        
+        
+            }
+            return $output;
+        
+        }
+    }
 }

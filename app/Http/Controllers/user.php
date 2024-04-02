@@ -23,49 +23,6 @@ class user extends Controller
             $output="";
             $user =DB::table('users')->where('name','LIKE','%'.$request->search."%")
             ->orWhere('id','LIKE','%'.$request->search."%")->get();
-            // if($user)
-            // {
-            //     $output= '<table class= "table">'.
-            //                 '<thead>'. 
-            //                 '<tr>'.
-            //                     '<td>'.'id'.'</td>'.
-            //                     '<td>'.'Name'.'</td>'.
-            //                     '<td>'.'Email'.'</td>'.
-            //                     '<td>'.'Phone Number'.'</td>'.
-            //                     '<td>'.'Address'.'</td>'.
-            //                     '<td>'.'User type'.'</td>'.
-            //                     '<td>'.'Action'.'</td>'.
-            //                 '</tr>'.
-            //                 '</thead>'.
-            //                 '<tbody class="table-group-divider">';
-            //     foreach ($user as $key => $users) {
-            //         $output.= 
-            //                 '<tr>'.
-            //                     '<td>'.$users->id.'</td>'.
-            //                     '<td>'.$users->name.'</td>'.
-            //                     '<td>'.$users->email.'</td>'.
-            //                     '<td>'.$users->phone_number.'</td>'.
-            //                     '<td>'.$users->address.'</td>'.
-            //                     '<td>'.$users->userType.'</td>'.
-            //                     '<td>'.'<form action="{{ url(/update, $users->id) }}" method="post">
-                                
-            //                     <select class="form-select" name="userType" aria-label="select example" >
-            //                         <option selected disabled></option>
-            //                         <option value="Admin">Admin</option>
-            //                         <option value="Engineer">Engineer</option>
-            //                         <option value="Technical">Technical</option>
-            //                         <option value="Technical">User</option>
-            //                     </select>
-            //                     '.'</td>'.
-            //                     '<td>'.'<input class="btn btn-info" type="submit" value="Update">'.'</td>'.
-            //                     '</form>'.
-            //                  '</tr>'.
-            //                  '</tbody>'.
-            //                  '</table>';
-            //     }
-
-            //     return Response($output);
-            // }
             $output='';
             if(count($user)>0){
         
@@ -153,14 +110,6 @@ class user extends Controller
 
 
     public function update(Request $request , $id){
-        // $request->validate([
-        //     "userType"=> "required|min:2|max:20",
-        // ]);
-        // DB::table("users")->where("id",$request->id)->update([
-        //     "userType"=>$request->userType,
-        // ]);
-        // return redirect("users");
-
         $edit = DB::table("users")->find($id);
         $edit->userType = $request->input('userType');
         

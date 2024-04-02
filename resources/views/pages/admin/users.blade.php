@@ -77,7 +77,7 @@ $.ajaxSetup({
              $('#search').on('keyup',function(){
                  var query= $(this).val();
                  $.ajax({
-                    url:"search",
+                    url:"searchUser",
                     type:"GET",
                     data:{'search':query},
                     success:function(data){
