@@ -12,7 +12,7 @@
 @include('../componantes/navadmin')
       <!--  Header End -->
       <div class="container-fluid">
-        <!--  Row 1 -->
+       
         <div class="row">
           <div class="col-lg-8 d-flex align-items-strech">
             <div class="card w-100">
@@ -22,18 +22,22 @@
                     <h5 class="card-title fw-semibold">Sales Overview</h5>
                   </div>
                   <div>
-                    <select class="form-select">
+                    <!-- <select class="form-select">
                       <option value="1">March 2023</option>
                       <option value="2">April 2023</option>
                       <option value="3">May 2023</option>
                       <option value="4">June 2023</option>
-                    </select>
+                    </select> -->
                   </div>
                 </div>
-                <div id="chart"></div>
+                <!-- <div id="chart"></div> -->
+                {!! $chart->container() !!}
               </div>
             </div>
           </div>
+          <script src="{{ $chart->cdn() }}"></script>
+
+{{ $chart->script() }}
           <div class="col-lg-4">
             <div class="row">
               <div class="col-lg-12">
@@ -276,7 +280,7 @@
         </div>
           
         <div class="py-6 px-6 text-center">
-          <p class="mb-0 fs-4">Design and Developed by <a href="#" target="_blank" class="pe-1 text-primary text-decoration-underline">Team 58 @El Shorouk Academy</a></p>
+          <p class="mb-0 fs-4">Design and Developed by <a href="#" class="pe-1 text-primary text-decoration-underline">Team 58 @El Shorouk Academy</a></p>
         </div>
       </div>
     </div>

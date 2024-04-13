@@ -470,6 +470,14 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input1_wrapper">
+                                                <div class="input2_inner">
+                                                    <input name="email" type="email" class="form-control input" placeholder="Your email" required>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="col-md-6">
                                             <div class="input1_wrapper">
                                                 <div class="input2_inner">

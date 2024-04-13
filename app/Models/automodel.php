@@ -12,6 +12,7 @@ class automodel extends Model
     public $timestamps = false;
     protected $fillable = [
         'name',
+        'email',
         'phone',
         'service_Date',
         'service_Time',

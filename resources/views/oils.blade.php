@@ -28,10 +28,17 @@
             <div class="card mt-24 mb-5" style="width: 15rem;">
       <img class="card-img-top" style="height: 250px !important;" src="{{ asset('images/'.$product->image) }}">
       <div class="card-body">
-        <h5 class="card-title">{{$product->proName}}</h5>
-        <h6 class="card-text">{{$product->price}} L.E</h6>
-        <p class="card-text">{{$product->description}}</p>
-        <a href="#" class="btn btn-danger">Add to cart</a>
+        <form action="{{ url('/order')}}" method="post">
+            @csrf
+            <h5 class="card-title">{{$product->proName}}</h5>
+            <h6 class="card-text">{{$product->price}} L.E</h6>
+            <p class="card-text">{{$product->description}}</p>
+            @if (Auth::check())
+            <input type="hidden" name="user_id" value="{{Auth::user()->id}}" class="btn btn-danger">
+            @endif
+            <input type="hidden" name="pro_id" value="{{$product->proID}}" class="btn btn-danger">
+            <button type="submit" class="btn btn-danger">Add to cart</button>
+        </form>
       </div>
     </div>
         </div>

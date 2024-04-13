@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\productmodel;
 use App\Models\bookingmodel;
+use App\Models\purshasesmodel;
+use App\Charts\MonthlySalesChart;
 
 class admin extends Controller
 {
@@ -92,5 +94,10 @@ class admin extends Controller
             return $output;
         
         }
+    }
+
+    public function saleschart(MonthlySalesChart $chart)
+    {
+        return view('pages.admin.index', ['chart' => $chart->build()]);
     }
 }

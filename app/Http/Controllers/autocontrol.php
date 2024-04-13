@@ -54,11 +54,22 @@ class autocontrol extends Controller
     {
         DB::table('booking')->insert([
             'bookingName' => $request->bookingName,
+            'email' => $request->email,
             'phone' => $request->phone,
             'service_Date' => $request->service_Date,
             'service_Time' => $request->service_Time,
             'service_type' => $request->service_type,
             'car_model' => $request->car_model
+        ]);
+
+        return redirect('/')->with('success', 'Your Booking is Created Successfully.');
+    }
+
+    public function order(Request $request){
+        DB::table('purchases')->insert([
+            'user_id' => $request->user_id,
+            'pro_id' => $request->pro_id,
+            'qty' => $request->qty
         ]);
 
         return redirect('/')->with('success', 'Your Booking is Created Successfully.');

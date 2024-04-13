@@ -36,9 +36,9 @@ Route::get('sginup', function () {
 
 Route::group(['middleware' => ['admin']], function () {
 
-Route::get('dashboard', function () {
-    return view('./pages/admin/index');
-});
+// Route::get('dashboard', function () {
+//     return view('./pages/admin/index');
+// });
 
 Route::get('insertproduct', function () {
     return view('./pages/admin/AddProducts/insertproduct');
@@ -54,6 +54,8 @@ Route::get('/searchBooking', [admin::class, 'search'])->name('searchBooking');
 
 Route::get('/booking', [admin::class, "index"]);
 
+Route::get('/dashboard', [admin::class, "saleschart"]);
+
 });
 
 
@@ -66,6 +68,9 @@ Route::post('/booking', [autocontrol::class, "booking"]);
 
 
 Route::get('/{pages}', [autocontrol::class, "index"]);
+
+//--------------------------------------------------------
+Route::post('/order', [autocontrol::class, "order"]);
 
 
 
