@@ -67,7 +67,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="Sales" aria-expanded="false">
+              <a class="sidebar-link" href="sales" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -105,7 +105,9 @@
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                  @if (Auth::check())   
+                  <img src="/img/logo-dark.png" alt="" width="35" height="35" class="rounded-circle">
+                  
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
@@ -121,9 +123,14 @@
                       <i class="ti ti-list-check fs-6"></i>
                       <p class="mb-0 fs-3">My Task</p>
                     </a>
-                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <form action="{{ route('logout') }}" method="POST">
+                      @csrf
+                      <!-- <a type="submit" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a> -->
+                      <button type="submit" class="btn btn-outline-primary mx-3 mt-2 d-block" style="width: 180px;">Logout</button>
+                    </form>
                   </div>
                 </div>
+                @endif
               </li>
             </ul>
           </div>

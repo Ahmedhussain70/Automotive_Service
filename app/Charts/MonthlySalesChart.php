@@ -18,33 +18,48 @@ class MonthlySalesChart
     }
 
     public function build(): \ArielMejiaDev\LarapexCharts\BarChart
-    {
+    {               
+        // $totalSales = productmodel::select(DB::raw(' MONTH(purchases.pur_date) AS Month, SUM(price * qty) AS Total_Sales'))
+        //     ->join('purchases', 'purchases.pro_id', '=', 'product.proID')
+        //     ->groupBy(DB::raw('MONTH(purchases.pur_date)'))
+        //     ->get();
+
+        // $data = [];
+        // $months = [];
+        // foreach ($totalSales as $sale) {
+        //     $data[] = $sale->Total_Sales;
+        //     $months[] = 'Month ' . $sale->Month;
+        // }
         
-            // ->setTitle('Sales Overview.')
-            // ->setSubtitle('Wins during season 2021.')
-            // ->addData('Sales', purshasesmodel::query()->limit(6)->pluck('pur_date')->toArray())
-            
-            $totalSales = productmodel::select(DB::raw('MONTH(purchases.pur_date) AS Month, SUM(price * qty) AS Total_Sales'))
+        // return $this->chart->barChart()
+        // ->setTitle('Monthly Sales')
+        // ->addData('Sales', $data)
+        // ->setXAxis($months)
+        // ->setColors(['#5D87FF']);
+
+        // return $chart;
+        $totalSales = productmodel::select(DB::raw(' 
+        YEAR(purchases.pur_date) AS Year, 
+        MONTH(purchases.pur_date) AS Month, 
+        SUM(price * qty) AS Total_Sales'))
             ->join('purchases', 'purchases.pro_id', '=', 'product.proID')
-            ->whereMonth('purchases.pur_date', '=', 4)
-            ->groupBy(DB::raw('MONTH(purchases.pur_date)'))
+            ->where(DB::raw('YEAR(purchases.pur_date)'), '=', date('Y'))
+            ->groupBy(DB::raw('YEAR(purchases.pur_date), MONTH(purchases.pur_date)'))
             ->get();
 
         $data = [];
+        $labels = [];
         foreach ($totalSales as $sale) {
-            $data[] = [
-                'name' => 'Month ' . $sale->Month,
-                'y' => $sale->Total_Sales,
-            ];
+            $data[] = $sale->Total_Sales;
+            $labels[] ='Month'. $sale->Month;
         }
-        
-        // $chart = new BarChart();
-        return $this->chart->barChart()
-        ->setTitle('Monthly Sales')
-        ->addData('Sales', $data)
-        ->setXAxis(['January', 'February', 'March', 'April', 'May', 'June']);
-        // $chart->addYAxis('y', 'Sales');
 
-        return $chart;
+        return $this->chart->barChart()
+            ->setTitle('Monthly Sales')
+            ->addData('Sales', $data)
+            ->setXAxis($labels)
+            ->setColors(['#5D87FF']);
+
+            return $chart;
     }
 }

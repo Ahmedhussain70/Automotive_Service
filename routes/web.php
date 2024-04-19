@@ -52,12 +52,14 @@ Route::put('/update/{id}',[user::class,"update"]);
 Route::get('/searchUser', [user::class, 'search'])->name('searchUser');
 Route::get('/searchBooking', [admin::class, 'search'])->name('searchBooking');
 
-Route::get('/booking', [admin::class, "index"]);
+Route::get('/booking', [admin::class, "allBooking"]);
 
 Route::get('/dashboard', [admin::class, "saleschart"]);
+Route::get('/sales', [admin::class, "sales"]);
+// Route::get('/dashboard', [admin::class, "RecentTransactions"]);
+
 
 });
-
 
 // Route::get('tirechange', function () {
 //     return view('./pages/tirechange');

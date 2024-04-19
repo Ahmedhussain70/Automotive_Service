@@ -9,10 +9,11 @@ use App\Models\productmodel;
 use App\Models\bookingmodel;
 use App\Models\purshasesmodel;
 use App\Charts\MonthlySalesChart;
+use App\Charts\YearlySalesChart;
 
 class admin extends Controller
 {
-    public function index(){
+    public function allBooking(){
         $booking = bookingmodel::all();
         return view("pages.admin.booking" ,compact("booking"));
     }
@@ -81,23 +82,37 @@ class admin extends Controller
                             </tr>
                             ';
                         }
-        
-        
-        
                  $output .= '
                      </tbody>
-                    </table>';
-        
-        
-        
+                    </table>';       
             }
             return $output;
         
         }
     }
 
-    public function saleschart(MonthlySalesChart $chart)
+    public function saleschart(MonthlySalesChart $chart, YearlySalesChart $yearlySales)
     {
-        return view('pages.admin.index', ['chart' => $chart->build()]);
+        $recentTransactions = productmodel::select('users.name','product.proName','purchases.pur_date',DB::raw('SUM(price * qty) AS budget'))
+            ->join('purchases','purchases.pro_id', '=', 'product.proID' )
+            ->join('users','users.id', '=', 'purchases.user_id' )
+            ->groupBy('users.name','product.proName','purchases.pur_date')
+            ->limit(5)
+            ->get();
+
+        return view('pages.admin.index')
+        ->with('recentTransactions', $recentTransactions)
+        ->with('chart', $chart->build())
+        ->with('yearlySales', $yearlySales->build());
+
+    }
+
+    public function sales(){
+        $allSales = productmodel::select('users.name','product.proName','purchases.pur_date',DB::raw('SUM(price * qty) AS budget'))
+            ->join('purchases','purchases.pro_id', '=', 'product.proID' )
+            ->join('users','users.id', '=', 'purchases.user_id' )
+            ->groupBy('users.name','product.proName','purchases.pur_date')
+            ->get();
+            return view('pages.admin.sales', compact('allSales'));
     }
 }

@@ -47,7 +47,8 @@
                     <h5 class="card-title mb-9 fw-semibold">Yearly Earnings</h5>
                     <div class="row align-items-center">
                       <div class="col-8">
-                        <h4 class="fw-semibold mb-3">$36,358</h4>
+                        <!-- <h4 class="fw-semibold mb-3">$36,358</h4> -->
+          
                         <div class="d-flex align-items-center mb-3">
                           <span
                             class="me-1 rounded-circle bg-light-success round-20 d-flex align-items-center justify-content-center">
@@ -56,23 +57,18 @@
                           <p class="text-dark me-1 fs-3 mb-0">+9%</p>
                           <p class="fs-3 mb-0">last year</p>
                         </div>
-                        <div class="d-flex align-items-center">
-                          <div class="me-4">
-                            <span class="round-8 bg-primary rounded-circle me-2 d-inline-block"></span>
-                            <span class="fs-2">2023</span>
-                          </div>
-                          <div>
-                            <span class="round-8 bg-light-primary rounded-circle me-2 d-inline-block"></span>
-                            <span class="fs-2">2023</span>
-                          </div>
-                        </div>
                       </div>
                       <div class="col-4">
                         <div class="d-flex justify-content-center">
-                          <div id="breakup"></div>
+                          <!-- <div id="breakup"></div> -->
+                          
                         </div>
                       </div>
                     </div>
+                    {!! $yearlySales->container() !!}
+                          <script src="{{ $yearlySales->cdn() }}"></script>
+
+{{ $yearlySales->script() }}
                   </div>
                 </div>
               </div>
@@ -182,16 +178,16 @@
                     <thead class="text-dark fs-4">
                       <tr>
                         <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">Id</h6>
-                        </th>
-                        <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">Assigned</h6>
-                        </th>
-                        <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Name</h6>
                         </th>
                         <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">Priority</h6>
+                          <h6 class="fw-semibold mb-0">Product</h6>
+                        </th>
+                        <!-- <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Name</h6>
+                        </th> -->
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">Date</h6>
                         </th>
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Budget</h6>
@@ -199,79 +195,30 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td class="border-bottom-0"><h6 class="fw-semibold mb-0">1</h6></td>
-                        <td class="border-bottom-0">
-                            <h6 class="fw-semibold mb-1">Sunil Joshi</h6>
-                            <span class="fw-normal">Web Designer</span>                          
-                        </td>
-                        <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">Elite Admin</p>
-                        </td>
-                        <td class="border-bottom-0">
-                          <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-primary rounded-3 fw-semibold">Low</span>
-                          </div>
-                        </td>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0 fs-4">$3.9</h6>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td class="border-bottom-0"><h6 class="fw-semibold mb-0">2</h6></td>
-                        <td class="border-bottom-0">
-                            <h6 class="fw-semibold mb-1">Andrew McDownland</h6>
-                            <span class="fw-normal">Project Manager</span>                          
-                        </td>
-                        <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">Real Homes WP Theme</p>
-                        </td>
-                        <td class="border-bottom-0">
-                          <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-secondary rounded-3 fw-semibold">Medium</span>
-                          </div>
-                        </td>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0 fs-4">$24.5k</h6>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td class="border-bottom-0"><h6 class="fw-semibold mb-0">3</h6></td>
-                        <td class="border-bottom-0">
-                            <h6 class="fw-semibold mb-1">Christopher Jamil</h6>
-                            <span class="fw-normal">Project Manager</span>                          
-                        </td>
-                        <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">MedicalPro WP Theme</p>
-                        </td>
-                        <td class="border-bottom-0">
-                          <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-danger rounded-3 fw-semibold">High</span>
-                          </div>
-                        </td>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0 fs-4">$12.8k</h6>
-                        </td>
-                      </tr>      
-                      <tr>
-                        <td class="border-bottom-0"><h6 class="fw-semibold mb-0">4</h6></td>
-                        <td class="border-bottom-0">
-                            <h6 class="fw-semibold mb-1">Nirav Joshi</h6>
-                            <span class="fw-normal">Frontend Engineer</span>                          
-                        </td>
-                        <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">Hosting Press HTML</p>
-                        </td>
-                        <td class="border-bottom-0">
-                          <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-success rounded-3 fw-semibold">Critical</span>
-                          </div>
-                        </td>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0 fs-4">$2.4k</h6>
-                        </td>
-                      </tr>                       
-                    </tbody>
+  @foreach($recentTransactions as $transaction)
+  <tr>
+    <!-- <td class="border-bottom-0"></td> -->
+    <td class="border-bottom-0">
+      <h6 class="fw-semibold mb-1">{{ $transaction->name }}</h6>
+      <span class="fw-normal"></span>
+    </td>
+    <td class="border-bottom-0">
+      <p class="mb-0 fw-normal">{{ $transaction->proName }}</p>
+    </td>
+    <!-- <td class="border-bottom-0">
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge bg-primary rounded-3 fw-semibold">Low</span>
+      </div>
+    </td> -->
+    <td class="border-bottom-0">
+      <h6 class="fw-semibold mb-0 fs-4">{{ $transaction->pur_date }}</h6>
+    </td>
+    <td class="border-bottom-0">
+      <h6 class="fw-semibold mb-0 fs-4">${{ $transaction->budget }}</h6>
+    </td>
+  </tr>
+  @endforeach
+</tbody>
                   </table>
                 </div>
               </div>
