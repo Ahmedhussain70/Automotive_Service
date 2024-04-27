@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\productmodel;
 use App\Models\bookingmodel;
+use App\Models\branchesmodel;
 use App\Models\purshasesmodel;
 use App\Charts\MonthlySalesChart;
 use App\Charts\YearlySalesChart;
@@ -114,5 +115,12 @@ class admin extends Controller
             ->groupBy('users.name','product.proName','purchases.pur_date')
             ->get();
             return view('pages.admin.sales', compact('allSales'));
+    }
+
+    public function branches(){
+        $Cairo = bookingmodel::where('branch', 'Cairo')->count();
+        $Alex = bookingmodel::where('branch', 'Alex')->count();
+        $Sohag = bookingmodel::where('branch', 'Sohag')->count();
+        return view("pages.admin.branches")->with('Cairo', $Cairo)->with('Alex', $Alex)->with('Sohag', $Sohag);
     }
 }

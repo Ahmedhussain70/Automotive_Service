@@ -8,7 +8,7 @@
                             <div class="footer-contact-links-wrapper">
                                 <div class="footer-contact-link-wrapper">
                                     <div class="image-wrapper footer-contact-link-icon">
-                                        <div class="icon-footer"> <i class="carex-phone-call"></i> </div>
+                                        <div class="icon-footer"> <i class="fa-solid fa-phone" style="color: white; font-size: 30px"></i> </div>
                                     </div>
                                     <div class="footer-contact-link-content">
                                         <h6>Call us</h6>
@@ -18,7 +18,7 @@
                                 <div class="footer-contact-links-divider"></div>
                                 <div class="footer-contact-link-wrapper">
                                     <div class="image-wrapper footer-contact-link-icon">
-                                        <div class="icon-footer"> <i class="carex-email"></i> </div>
+                                        <div class="icon-footer"> <i class="fa-solid fa-envelope"></i> </div>
                                     </div>
                                     <div class="footer-contact-link-content">
                                         <h6>Write to us</h6>
@@ -28,7 +28,7 @@
                                 <div class="footer-contact-links-divider"></div>
                                 <div class="footer-contact-link-wrapper">
                                     <div class="image-wrapper footer-contact-link-icon">
-                                        <div class="icon-footer"> <i class="carex-location-map"></i> </div>
+                                        <div class="icon-footer"> <i class="fa-solid fa-location-dot"></i> </div>
                                     </div>
                                     <div class="footer-contact-link-content">
                                         <h6>Address</h6>

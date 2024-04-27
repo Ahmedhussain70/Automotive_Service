@@ -446,7 +446,7 @@
                             <p>Get special repaire service for your car from our experts with appointmet and win car wash Free.</p>
                         </div>
                         <div class="help">
-                            <div class="icon color-1"><span class="carex-phone-call"></span></div>
+                            <div class="icon color-1"><i class="fa-solid fa-phone" style="color: #d3071f; font-size: 30px"></i></div>
                             <div class="text">
                                 <p class="color-1">Need Any Help?</p> <a class="color-1" href="tel:855-100-4444">855 100 4444</a>
                             </div>
@@ -462,19 +462,18 @@
                             <div class="booking-inner clearfix">
                                 <form class="form1 clearfix" action="{{ url('/booking') }}" method="post" enctype="multipart/form-data">
                                 @csrf
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="input1_wrapper">
-                                                <div class="input2_inner">
-                                                    <input name="bookingName" type="text" class="form-control input" placeholder="Your Name" required>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="row">
                                         <div class="col-md-6">
                                             <div class="input1_wrapper">
                                                 <div class="input2_inner">
-                                                    <input name="email" type="email" class="form-control input" placeholder="Your email" required>
+                                                <input name="bookingName" type="text" class="form-control input" placeholder="Your Name" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input1_wrapper">
+                                                <div class="input2_inner">
+                                                <input name="email" type="email" class="form-control input" placeholder="Your email" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -527,6 +526,18 @@
                                             <div class="input1_wrapper">
                                                 <div class="input2_inner">
                                                     <input name="car_model" type="text" class="form-control input" placeholder="Car Model" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="select1_wrapper">
+                                                <div class="select1_inner">
+                                                    <select name="branch" class="select2 select" style="width: 100%">
+                                                        <option selected disabled>Branch</option>
+                                                        <option value="Cairo">Cairo</option>
+                                                        <option value="Alex">Alex</option>
+                                                        <option value="Sohag">Sohag</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>

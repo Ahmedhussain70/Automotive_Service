@@ -11,11 +11,14 @@ class bookingmodel extends Model
     public $timestamps = false;
     protected $fillable = [
         'bookingName',
+        'email',
         'phone',
         'service_Date',
         'service_Time',
         'service_type',
-        'car_model'
+        'car_model',
+        'branch'
+
     ];
     use HasFactory;
 }

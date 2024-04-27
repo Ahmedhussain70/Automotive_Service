@@ -59,7 +59,8 @@ class autocontrol extends Controller
             'service_Date' => $request->service_Date,
             'service_Time' => $request->service_Time,
             'service_type' => $request->service_type,
-            'car_model' => $request->car_model
+            'car_model' => $request->car_model,
+            'branch' => $request->branch
         ]);
 
         return redirect('/')->with('success', 'Your Booking is Created Successfully.');
@@ -74,37 +75,4 @@ class autocontrol extends Controller
 
         return redirect('/')->with('success', 'Your Booking is Created Successfully.');
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Resource $resource)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Resource $resource)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Resource $resource)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Resource $resource)
-    {
-        //
-    }
-
 }

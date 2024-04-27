@@ -20,10 +20,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-// Route::get('about', function () {
-//     return view('./pages/about');
-// });
-
 Route::get('login', function () {
     return view('./pages/Auth/login');
 });
@@ -32,33 +28,28 @@ Route::get('sginup', function () {
     return view('./pages/Auth/sginup');
 });
 
-// Dashboard
+// Dashboard for Admin
 
 Route::group(['middleware' => ['admin']], function () {
 
-// Route::get('dashboard', function () {
-//     return view('./pages/admin/index');
-// });
+    Route::get('insertproduct', function () {
+        return view('./pages/admin/AddProducts/insertproduct');
+    });
 
-Route::get('insertproduct', function () {
-    return view('./pages/admin/AddProducts/insertproduct');
-});
+    Route::post('/insert', [admin::class, "store"]);
 
-Route::post('/insert', [admin::class, "store"]);
+    Route::get('/users',  [user::class, "index"]);
+    Route::get('/delete/{id}',[user::class,"delete"]);
+    Route::put('/update/{id}',[user::class,"update"]);
+    Route::get('/searchUser', [user::class, 'search'])->name('searchUser');
+    Route::get('/searchBooking', [admin::class, 'search'])->name('searchBooking');
 
-Route::get('/users',  [user::class, "index"]);
-Route::get('/delete/{id}',[user::class,"delete"]);
-Route::put('/update/{id}',[user::class,"update"]);
-Route::get('/searchUser', [user::class, 'search'])->name('searchUser');
-Route::get('/searchBooking', [admin::class, 'search'])->name('searchBooking');
+    Route::get('/booking', [admin::class, "allBooking"]);
 
-Route::get('/booking', [admin::class, "allBooking"]);
-
-Route::get('/dashboard', [admin::class, "saleschart"]);
-Route::get('/sales', [admin::class, "sales"]);
+    Route::get('/dashboard', [admin::class, "saleschart"]);
+    Route::get('/sales', [admin::class, "sales"]);
+    Route::get('/branches', [admin::class, "branches"]);
 // Route::get('/dashboard', [admin::class, "RecentTransactions"]);
-
-
 });
 
 // Route::get('tirechange', function () {
