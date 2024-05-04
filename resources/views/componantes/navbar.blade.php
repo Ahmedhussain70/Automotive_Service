@@ -85,7 +85,7 @@
     margin-top: 200px;
     width: 20px;">
                   <div class="message-body">
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                    <a href="userProfile" class="d-flex align-items-center gap-2 dropdown-item">
                     <i class="fa-regular fa-user" style="font-size: 17px;margin-top: -12px;"></i>
                       <p class="mb-0 fs-3" style="
     font-size: 15px !important;

@@ -10,10 +10,16 @@ use App\Models\User as usermodel;
 class user extends Controller
 {
 
-    public function index(){
+    public function users()
+    {
         $user = usermodel::all();
-        return view("pages.admin.users" ,compact("user"));
+        return view('pages.admin.users', compact('user'));
+    }
 
+    public function profile()
+    {
+        $user = Auth::user();
+        return view('userprofile', compact('user'));
     }
 
     public function search(Request $request)
@@ -81,7 +87,8 @@ class user extends Controller
         }
     }
 
-    public function addUser (Request $request){
+    public function addUser (Request $request)
+    {
         DB::table("users")->insert([
             "name"=> $request->name,
             "email"=> $request->email,
@@ -93,7 +100,8 @@ class user extends Controller
         return redirect()->to(route('login'));
     }
 
-    public function logIn (Request $request){
+    public function logIn (Request $request)
+    {
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required']
@@ -109,7 +117,8 @@ class user extends Controller
     }
 
 
-    public function update(Request $request , $id){
+    public function update(Request $request , $id)
+    {
         $edit = DB::table("users")->find($id);
         $edit->userType = $request->input('userType');
         
@@ -120,15 +129,31 @@ class user extends Controller
         
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         DB::table("users")->delete($id);
         return redirect("users");
     }
 
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
         Auth::logout();
         $request->session()->invalidate();
         return redirect('login');
     }
 
+    public function updateProfile(Request $request) {
+    
+        $user = Auth::user();
+    
+        $user->update([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>bcrypt($request->password)
+        ]);
+    
+        $user->save();
+
+        return redirect("/")->with('success', 'Updated successfully');
+    }
 }

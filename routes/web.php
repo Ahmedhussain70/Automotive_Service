@@ -49,6 +49,19 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/dashboard', [admin::class, "saleschart"]);
     Route::get('/sales', [admin::class, "sales"]);
     Route::get('/branches', [admin::class, "branches"]);
+
+    // Route::get('/{pages}', function () {
+    //     return view('./pages/admin/profile');
+    // });
+
+    // Route::get('/users', [user::class, "index"]);
+    Route::get('/profile', [admin::class, "profile"]);
+
+    // Route::get('/{page}', [user::class, "index"]);
+    Route::get('/users', [user::class, "users"]);
+    Route::put('/updateProfile', [admin::class, "updateProfile"]);
+    Route::put('/updateProfile1', [user::class, "updateProfile"]);
+
 // Route::get('/dashboard', [admin::class, "RecentTransactions"]);
 });
 
@@ -56,6 +69,7 @@ Route::group(['middleware' => ['admin']], function () {
 //     return view('./pages/tirechange');
 // });
 
+Route::get('/userProfile', [user::class, "profile"]);
 
 Route::post('/booking', [autocontrol::class, "booking"]);
 

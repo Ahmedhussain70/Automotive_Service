@@ -19,11 +19,12 @@ class autocontrol extends Controller
         // return view('pages/oils' , compact("products"));
         // return view('tires' , compact("products"));
 
-        if (!in_array($page, ['tires', 'oils','engines','battary','ABS'])) {
+        if (!in_array($page, ['tires', 'oils','engines','battary','ABS']))
+        {
             abort(404);
-          }
+        }
         
-          return view($page ,compact("products"));
+        return view($page ,compact("products"));
     }
 
     /**

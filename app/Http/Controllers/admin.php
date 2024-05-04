@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 use App\Models\productmodel;
 use App\Models\bookingmodel;
 use App\Models\branchesmodel;
@@ -122,5 +123,26 @@ class admin extends Controller
         $Alex = bookingmodel::where('branch', 'Alex')->count();
         $Sohag = bookingmodel::where('branch', 'Sohag')->count();
         return view("pages.admin.branches")->with('Cairo', $Cairo)->with('Alex', $Alex)->with('Sohag', $Sohag);
+    }
+
+    public function updateProfile(Request $request) {
+    
+        $user = Auth::user();
+    
+        $user->update([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>bcrypt($request->password)
+        ]);
+    
+        $user->save();
+
+        return redirect("dashboard")->with('success', 'updated successfully');
+    }
+
+    public function profile()
+    {
+        $user = Auth::user();
+        return view('pages.admin.profile', compact('user'));
     }
 }
