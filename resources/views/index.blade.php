@@ -1,5 +1,5 @@
-@include('../componantes/loading')
 @include('../componantes/navbar')
+@include('../componantes/loading')
     <!-- Progress scroll totop -->
     @if(Session::has('success'))
         <div id="alertt" class="alert alert-success">

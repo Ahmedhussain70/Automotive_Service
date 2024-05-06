@@ -6,7 +6,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Document</title>
 
 </head>
@@ -26,28 +25,20 @@
   <table class="table">
     <thead>
     <tr>
-      <th scope="col">ID</th>
       <th scope="col">Name</th>
       <th scope="col">Product</th>
       <th scope="col">Date</th>
       <th scope="col">budget</th>
-      <th scope="col">Action</th>
     </tr>
   </thead>
   @foreach ($allSales as $Transaction)
   <tbody class="table-group-divider">
     <tr>
-      <th scope="row">{{$Transaction->pur_id}}</th>
       <td>{{$Transaction->name}}</td>
       <td>{{$Transaction->proName}}</td>
       <td>{{$Transaction->pur_date}}</td>
       <td>{{$Transaction->budget}}</td>
-      
       <td>
-          <input class="btn btn-info" type="submit" value="Update">
-        </form>
-      <a class="btn btn-Danger" href="delete/{{$Transaction->id}}">Delete</a></td>
-      
     </tr>
   </div>
   </tbody>
@@ -67,9 +58,9 @@ $.ajaxSetup({
              $('#search').on('keyup',function(){
                  var query= $(this).val();
                  $.ajax({
-                    url:"searchUser",
+                    url:"searchSales",
                     type:"GET",
-                    data:{'search':query},
+                    data:{'searchSales':query},
                     success:function(data){
                         $('#search_list').html(data);
                     }

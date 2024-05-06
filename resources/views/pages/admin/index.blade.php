@@ -1,3 +1,4 @@
+@include('../componantes/navadmin')
 <!doctype html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
 </head>
 
 <body>
-@include('../componantes/navadmin')
+
       <!--  Header End -->
       <div class="container-fluid">
        
@@ -22,15 +23,8 @@
                     <h5 class="card-title fw-semibold">Sales Overview</h5>
                   </div>
                   <div>
-                    <!-- <select class="form-select">
-                      <option value="1">March 2023</option>
-                      <option value="2">April 2023</option>
-                      <option value="3">May 2023</option>
-                      <option value="4">June 2023</option>
-                    </select> -->
                   </div>
                 </div>
-                <!-- <div id="chart"></div> -->
                 {!! $chart->container() !!}
               </div>
             </div>
@@ -60,8 +54,6 @@
                       </div>
                       <div class="col-4">
                         <div class="d-flex justify-content-center">
-                          <!-- <div id="breakup"></div> -->
-                          
                         </div>
                       </div>
                     </div>
@@ -106,68 +98,6 @@
           </div>
         </div>
         <div class="row">
-          <!-- <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="card w-100">
-              <div class="card-body p-4">
-                <div class="mb-4">
-                  <h5 class="card-title fw-semibold">Recent Transactions</h5>
-                </div>
-                <ul class="timeline-widget mb-0 position-relative mb-n5">
-                  <li class="timeline-item d-flex position-relative overflow-hidden">
-                    <div class="timeline-time text-dark flex-shrink-0 text-end">09:30</div>
-                    <div class="timeline-badge-wrap d-flex flex-column align-items-center">
-                      <span class="timeline-badge border-2 border border-primary flex-shrink-0 my-8"></span>
-                      <span class="timeline-badge-border d-block flex-shrink-0"></span>
-                    </div>
-                    <div class="timeline-desc fs-3 text-dark mt-n1">Payment received from John Doe of $385.90</div>
-                  </li>
-                  <li class="timeline-item d-flex position-relative overflow-hidden">
-                    <div class="timeline-time text-dark flex-shrink-0 text-end">10:00 am</div>
-                    <div class="timeline-badge-wrap d-flex flex-column align-items-center">
-                      <span class="timeline-badge border-2 border border-info flex-shrink-0 my-8"></span>
-                      <span class="timeline-badge-border d-block flex-shrink-0"></span>
-                    </div>
-                    <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">New sale recorded <a
-                        href="javascript:void(0)" class="text-primary d-block fw-normal">#ML-3467</a>
-                    </div>
-                  </li>
-                  <li class="timeline-item d-flex position-relative overflow-hidden">
-                    <div class="timeline-time text-dark flex-shrink-0 text-end">12:00 am</div>
-                    <div class="timeline-badge-wrap d-flex flex-column align-items-center">
-                      <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
-                      <span class="timeline-badge-border d-block flex-shrink-0"></span>
-                    </div>
-                    <div class="timeline-desc fs-3 text-dark mt-n1">Payment was made of $64.95 to Michael</div>
-                  </li>
-                  <li class="timeline-item d-flex position-relative overflow-hidden">
-                    <div class="timeline-time text-dark flex-shrink-0 text-end">09:30 am</div>
-                    <div class="timeline-badge-wrap d-flex flex-column align-items-center">
-                      <span class="timeline-badge border-2 border border-warning flex-shrink-0 my-8"></span>
-                      <span class="timeline-badge-border d-block flex-shrink-0"></span>
-                    </div>
-                    <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">New sale recorded <a
-                        href="javascript:void(0)" class="text-primary d-block fw-normal">#ML-3467</a>
-                    </div>
-                  </li>
-                  <li class="timeline-item d-flex position-relative overflow-hidden">
-                    <div class="timeline-time text-dark flex-shrink-0 text-end">09:30 am</div>
-                    <div class="timeline-badge-wrap d-flex flex-column align-items-center">
-                      <span class="timeline-badge border-2 border border-danger flex-shrink-0 my-8"></span>
-                      <span class="timeline-badge-border d-block flex-shrink-0"></span>
-                    </div>
-                    <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">New arrival recorded 
-                    </div>
-                  </li>
-                  <li class="timeline-item d-flex position-relative overflow-hidden">
-                    <div class="timeline-time text-dark flex-shrink-0 text-end">12:00 am</div>
-                    <div class="timeline-badge-wrap d-flex flex-column align-items-center">
-                      <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
-                    </div>
-                    <div class="timeline-desc fs-3 text-dark mt-n1">Payment Done</div>
-                  </li>
-                </ul>
-              </div>
-            </div> -->
           </div>
           <div class="col-lg-8 d-flex align-items-stretch">
             <div class="card w-100">
@@ -183,9 +113,6 @@
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Product</h6>
                         </th>
-                        <!-- <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">Name</h6>
-                        </th> -->
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">Date</h6>
                         </th>
@@ -197,7 +124,6 @@
                     <tbody>
   @foreach($recentTransactions as $transaction)
   <tr>
-    <!-- <td class="border-bottom-0"></td> -->
     <td class="border-bottom-0">
       <h6 class="fw-semibold mb-1">{{ $transaction->name }}</h6>
       <span class="fw-normal"></span>
@@ -205,11 +131,6 @@
     <td class="border-bottom-0">
       <p class="mb-0 fw-normal">{{ $transaction->proName }}</p>
     </td>
-    <!-- <td class="border-bottom-0">
-      <div class="d-flex align-items-center gap-2">
-        <span class="badge bg-primary rounded-3 fw-semibold">Low</span>
-      </div>
-    </td> -->
     <td class="border-bottom-0">
       <h6 class="fw-semibold mb-0 fs-4">{{ $transaction->pur_date }}</h6>
     </td>

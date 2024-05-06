@@ -34,13 +34,6 @@
           placeholder="Password"
           required
           />
-          <!-- <input
-          class="form-control log"
-          type="password"
-          id="password2"
-          placeholder="Enter your password again"
-          required
-          /> -->
           <input
           class="form-control log"
           type="text"

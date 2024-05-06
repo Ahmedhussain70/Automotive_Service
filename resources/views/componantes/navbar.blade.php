@@ -35,9 +35,6 @@
     </style>
 </head>
 <body>
-<!-- <div class="progress-wrap cursor-pointer" id="btn-up">
-        <i class="fa-solid fa-arrow-up progress-circle svg-content"></i>
-    </div> -->
     <button id="btn-up" class="col-lg-12 col-12">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
@@ -101,20 +98,7 @@
                     @else
                     <li class="nav-item nav-link-1"><a class="nav-link ms-5" href="login"
                   ><i class="fa-regular fa-user user"></i></a></li> @endif
-                  <!-- <li class="nav-item nav-link-1 ms-5"><button onclick="lightmode()">light</button></li> -->
                 </ul>
-
-                <!-- <div class="navbar-right">
-                    <div class="wrap">
-                        <div class="icon"> <i class="carex-phone-call"></i> </div>
-                        <div class="text">
-                            <p>Need help?</p>
-                            <h5><a href="tel:8551004444">855 100 4444</a></h5>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <a class="nav-link-1 ms-5" href="login.php"
-                  ><i class="fa-regular fa-user user"></i></a> -->
             </div>
         </div>
     </nav>

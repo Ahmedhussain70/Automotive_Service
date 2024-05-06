@@ -1,5 +1,5 @@
-@include('../componantes/loading')
 @include('../componantes/navbar')
+@include('../componantes/loading')
 <!DOCTYPE html>
 <html lang="en">
 <head>

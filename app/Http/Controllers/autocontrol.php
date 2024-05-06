@@ -16,8 +16,6 @@ class autocontrol extends Controller
     public function index(string $page)
     {
         $products = productmodel::all();
-        // return view('pages/oils' , compact("products"));
-        // return view('tires' , compact("products"));
 
         if (!in_array($page, ['tires', 'oils','engines','battary','ABS']))
         {
@@ -27,29 +25,6 @@ class autocontrol extends Controller
         return view($page ,compact("products"));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        // return view('Admin/CreateDevice');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-
-        // $imageName = time().'.'.$request->image->extension();
-        // $request->image->move(public_path('images'), $imageName);
-        // DB::table('homedevices')->insert([
-        //     'image' => $imageName,
-        //     'Name' => $request->Name,
-        //     'Price' => $request->Price,
-        //     'Description' => $request->Description
-        // ]);
-    }
 
     public function booking(Request $request)
     {

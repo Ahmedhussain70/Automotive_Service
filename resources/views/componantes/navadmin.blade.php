@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="css/styles.min.css" />
+<link rel="shortcut icon" href="img/icon.png" type='image/x-icon'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
@@ -115,13 +116,8 @@
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
-                    <!-- <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                      <i class="ti ti-list-check fs-6"></i>
-                      <p class="mb-0 fs-3">My Task</p>
-                    </a> -->
                     <form action="{{ route('logout') }}" method="POST">
                       @csrf
-                      <!-- <a type="submit" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a> -->
                       <button type="submit" class="btn btn-outline-primary mx-3 mt-2 d-block" style="width: 180px;">Logout</button>
                     </form>
                   </div>

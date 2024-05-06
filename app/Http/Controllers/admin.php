@@ -93,6 +93,57 @@ class admin extends Controller
         }
     }
 
+    public function searchSales(Request $request)
+    {
+        if($request->ajax())
+        {
+            $output="";
+            $Sales = productmodel::select('users.name','product.proName','purchases.pur_date',DB::raw('SUM(price * qty) AS budget'))
+            ->join('purchases','purchases.pro_id', '=', 'product.proID' )
+            ->join('users','users.id', '=', 'purchases.user_id' )
+            ->groupBy('users.name','product.proName','purchases.pur_date')
+            ->limit(5)
+            ->get();
+   
+            $output='';
+            if(count($Sales)>0){
+        
+                 $output ='
+                 <meta name="csrf-token" content="csrf_token">
+                    <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Product Name</td>
+                            <td>Date</td>
+                            <td>budget</td>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">';
+        
+                        foreach($Sales as $key => $saless){
+                            $output .='
+                            <tr>
+                            <th scope="row">'.$saless->name.'</th>
+                            <td>'.$saless->proName.'</td>
+                            <td>'.$saless->pur_date.'</td>
+                            <td>'.$saless->budget.'</td>
+                            <td>'.'
+
+                            '.'</td>'.
+                            '</td>
+                            </tr>
+                            ';
+                        }
+                 $output .= '
+                     </tbody>
+                    </table>';       
+            }
+            return $output;
+        
+        }
+    }
+
     public function saleschart(MonthlySalesChart $chart, YearlySalesChart $yearlySales)
     {
         $recentTransactions = productmodel::select('users.name','product.proName','purchases.pur_date',DB::raw('SUM(price * qty) AS budget'))

@@ -13,7 +13,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Document</title>
     <style>
   input,
@@ -59,25 +58,6 @@ input,textarea[type=text]:focus {
     <div class="border-b border-gray-900/10 pb-12">
       <h2 class="">Personal information</h2>
       <p class="text-black">Notce This Page Is Using By Administrator</p>
-
-      <!-- <div class="col-span-full mt-5">
-          <label for="cover-photo">Add Photo</label>
-          <div class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
-            <div class="text-center">
-              <i class="fa-solid fa-cloud mt-3"></i>
-              <div class="mt-3 flex text-sm leading-6 text-gray-600 col-12">
-                <label for="file-upload">
-                  <input id="file-upload" name="image" type="file" style="border: unset !important;">
-                </label>
-              </div>
-              <p class="mt-3 text-xs leading-5 text-gray-600">PNG, JPG, GIF up to 10MB</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- <input class="form-control" type="file" name="image"> -->
-
       <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
         <div class="sm:col-span-4">
           <label for="Name" class="block text-sm font-medium leading-6 mt-2 col-12">Name</label>

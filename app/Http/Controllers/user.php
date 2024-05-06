@@ -65,8 +65,8 @@ class user extends Controller
                                 <option value="Technical">Technical</option>
                                 <option value="User">User</option>
                             </select>
-                            <input class="btn btn-info" type="submit" value="Update">
-                            <td>  <a class="btn btn-Danger" href="delete/'.$users->id.'">Delete</a>
+                            
+                            <td> <input class="btn btn-info" type="submit" value="Update"> <a class="btn btn-Danger" href="delete/'.$users->id.'">Delete</a>
                             </form>'.'</td>'.
                             '</td>
                             </tr>
