@@ -21,7 +21,7 @@ class autocontrol extends Controller
         {
             abort(404);
         }
-        
+
         return view($page ,compact("products"));
     }
 
@@ -37,16 +37,6 @@ class autocontrol extends Controller
             'service_type' => $request->service_type,
             'car_model' => $request->car_model,
             'branch' => $request->branch
-        ]);
-
-        return redirect('/')->with('success', 'Your Booking is Created Successfully.');
-    }
-
-    public function order(Request $request){
-        DB::table('purchases')->insert([
-            'user_id' => $request->user_id,
-            'pro_id' => $request->pro_id,
-            'qty' => $request->qty
         ]);
 
         return redirect('/')->with('success', 'Your Booking is Created Successfully.');

@@ -39,12 +39,13 @@
         <div class="row">
         @foreach ($products as $product)
         @if($product->category === "Tire")
-    
+
         <div class="col-12 col-md-6 col-lg-3">
             <div class="card mt-24 mb-5" style="width: 15rem;">
       <img class="card-img-top" style="height: 250px !important;" src="{{ asset('images/'.$product->image) }}">
       <div class="card-body">
-        <form action="{{ url('/order')}}" method="post">
+        {{-- <!-- <form action="{{ url('/order')}}" method="post"> --> --}}
+          {{-- <form action="{{ url('/cart') }}" method="post">
             @csrf
             <h5 class="card-title">{{$product->proName}}</h5>
             <h6 class="card-text">{{$product->price}} L.E</h6>
@@ -56,9 +57,26 @@
             @if (Auth::check())
             <input type="hidden" name="user_id" value="{{Auth::user()->id}}" class="btn btn-danger">
             @endif
-            <input type="hidden" name="pro_id" value="{{$product->proID}}" class="btn btn-danger">
+            <input type="hidden" name="proID" value="{{$product->proID}}" class="btn btn-danger">
+            <button type="submit" class="btn btn-danger">Add to cart</button>
+        </form> --}}
+        <form action="{{ url('/addtocart') }}" method="post">
+            @csrf
+            <h5 class="card-title">{{ $product->proName }}</h5>
+            <h6 class="card-text">{{ $product->price }} L.E</h6>
+            <input type="hidden" name="price" value="{{ $product->price }}">
+            <input type="hidden" name="proID" value="{{ $product->proID }}">
+            <a class="minus">-</a>
+            <input class="range" type="range" name="qty" min="1" step="1" value="1" style="width: 63px;">
+            <a class="plus">+</a>
+            <output for="range" class="output">1</output>
+            <p class="card-text">{{ $product->description }}</p>
+            @if (Auth::check())
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+            @endif
             <button type="submit" class="btn btn-danger">Add to cart</button>
         </form>
+
       </div>
     </div>
         </div>
@@ -67,7 +85,7 @@
         </div>
     </div>
     <script>
-    
+
 
 $(document).ready(function() {
   $(".minus").click(function(event) {

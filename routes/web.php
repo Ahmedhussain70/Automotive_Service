@@ -56,8 +56,8 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/users', [user::class, "users"]);
     Route::put('/updateProfile', [admin::class, "updateProfile"]);
     Route::put('/updateProfile1', [user::class, "updateProfile"]);
-
 });
+Route::get('/cart', [user::class, "index"])->name('cart');
 
 Route::get('/userProfile', [user::class, "profile"]);
 
@@ -67,9 +67,11 @@ Route::post('/booking', [autocontrol::class, "booking"]);
 Route::get('/{pages}', [autocontrol::class, "index"]);
 
 //--------------------------------------------------------
-Route::post('/order', [autocontrol::class, "order"]);
+Route::post('/order', [user::class, "order"]);
 
 
+
+Route::post('/addtocart', [user::class, "addToCart"]);
 
 Route::post('/sginup', [user::class , "addUser"])->name('sginup');
 Route::post('/login', [user::class , "logIn"])->name('login');

@@ -76,9 +76,26 @@ class admin extends Controller
                             <td>'.$book->service_type.'</td>
                             <td>'.$book->car_model.'</td>
                             <td>'.'
-                            <input type="hidden" name="_method" value="PUT">
-                            <input class="btn btn-info" type="submit" value="Accept">
-                            <a class="btn btn-Danger" href="">Reject</a>
+                            <a href="#exampleModalToggle" data-id="{{$book->email}}" class="modelacc btn btn-primary" data-bs-toggle="modal"  role="button">
+          Accept
+        </a>
+        <a class="modelrej btn btn-danger" data-id="{{$book->email}}">Reject</a>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered col-12">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel">Accept Booking</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="/actionBooking/'.$book->bookingID.'" method="post">
+  <div class="container mb-3">
+    <label for="exampleInputEmail1" class="form-label mt-2">Driver</label>
+    <textarea name="Driver" type="text"  class="form-control" id="client" aria-describedby="emailHelp" Required></textarea>
+    <div class="d-flex justify-content-between">
+      <!-- <button type="submit" class="mt-3 btn btn-primary">Submit</button> -->
+        <a id="mail" class="accep mt-3 btn btn-primary">Mail To</a>
+    </div>
+        </form>
                             '.'</td>'.
                             '</td>
                             </tr>

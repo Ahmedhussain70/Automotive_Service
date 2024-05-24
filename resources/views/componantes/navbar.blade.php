@@ -63,13 +63,16 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#Our Blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
+                    {{-- <form action="{{ route('cart') }}" method="GET"> --}}
+                        <li class="nav-item"><a class="nav-link" href="cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    {{-- </form> --}}
                     <li class="nav-item nav-link ms-5">
                       <div class="dark-light">
                          <i class='bx bx-moon moon'></i>
                          <i class='bx bx-sun sun'></i>
                      </div>
                   </li>
-                    @if (Auth::check())      
+                    @if (Auth::check())
                     <div class="navbar" style="background-color: transparent;">
   <!-- Other navbar content -->
   <div class="account nav-item dropdown">
